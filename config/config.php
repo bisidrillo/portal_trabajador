@@ -4,11 +4,11 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Datos de conexión a MariaDB
-$host = 'localhost';          // O la IP de MariaDB si no está en el NAS
-$db   = 'portal_trabajador';  // Nombre de la base de datos
-$user = 'portaluser';            // Usuario de MariaDB (¡cámbialo!)
-$pass = 'Portal2025#';         // Contraseña de ese usuario
+// Datos de conexión a MariaDB obtenidos de variables de entorno
+$host = getenv('DB_HOST') ?: 'localhost';
+$db   = getenv('DB_NAME') ?: 'portal_trabajador';
+$user = getenv('DB_USER') ?: 'portaluser';
+$pass = getenv('DB_PASS') ?: 'Portal2025#';
 $charset = 'utf8mb4';
 
 // Configuración DSN para PDO
