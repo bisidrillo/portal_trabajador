@@ -9,4 +9,4 @@ try {
 } catch (PDOException $e) {
     echo "❌ Error en la conexión: " . htmlspecialchars($e->getMessage());
 }
-?>
+
