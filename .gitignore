@@ -1,0 +1,16 @@
+# Ignore environment configuration files
+.env
+*.env
+config/*.local.php
+
+# Ignore vendor directories
+/vendor/
+/node_modules/
+
+# Development artifacts
+*.log
+*.cache
+*.tmp
+.DS_Store
+.idea/
+.vscode/
