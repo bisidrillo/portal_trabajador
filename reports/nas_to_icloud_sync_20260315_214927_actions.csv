@@ -1,0 +1,416 @@
+action,rel,nas_size,icloud_size,nas_mtime,icloud_mtime,reason
+copy_missing_to_icloud,0000/PISOS/ANA BANESA NAVARRO MARTIN_0000_PISOS_00 00 0000 5_XX-XX-XXXX_00-00-0000.pdf,147767,,2026-02-13 23:22:07,,No existe en iCloud con la misma ruta
+refresh_icloud_mtime_or_content,402/PISOS/KEVIN LUIS GONZALEZ SUAREZ_402_PISOS_VALET_09-05-2024_05-08-2024_0048768-01.pdf,361191,361191,2026-03-15 17:06:31,2024-08-16 10:49:34,NAS más reciente
+refresh_icloud_mtime_or_content,402/PISOS/TANAUSU ARMAS GARCIA_402_PISOS_LENCERO_01-02-2008_30-04-2008_0347816-1.pdf,1786279,1786279,2026-03-15 17:06:31,2024-01-25 18:06:05,NAS más reciente
+refresh_icloud_mtime_or_content,402/PISOS/TANAUSU ARMAS GARCIA_402_PISOS_LENCERO_23-03-2010_22-12-2010_0271978-1.pdf,1788456,1788456,2026-03-15 17:06:31,2024-01-25 18:05:59,NAS más reciente
+refresh_icloud_mtime_or_content,402/PISOS/TUDORA MARUNTELU_402_PISOS_29-11-2023_28-02-2024_0237357-1.pdf,436693,436693,2026-03-15 17:06:32,2023-12-30 20:53:05,NAS más reciente
+refresh_icloud_mtime_or_content,402/RECEPCION/VICTOR HERNANDEZ CHRISTENSEN_402_RECEPCION_RECEPCIONISTA_22-06-2024_21-09-2024_0163122.pdf,1107266,1107266,2026-03-15 17:20:42,2024-08-22 12:41:12,NAS más reciente
+copy_missing_to_icloud,410/COCINA/ARIDANY MAYOR REYES_410_COCINA_XX-XX-XXXX_0066730.pdf,1174331,,2024-01-05 17:30:40,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/ARIDANY MAYOR REYES_410_COCINA_XX-XX-XXXX_0315795.pdf,938005,,2024-11-10 21:12:48,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/ASHLY DUBRASKA ROJAS BERNAL_410_COCINA_XX-XX-XXXX_0234470.pdf,1120099,,2024-01-14 13:27:50,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/ASHLY DUBRASKA ROJAS BERNAL_410_COCINA_XX-XX-XXXX_0278734.pdf,1038263,,2024-06-19 11:06:15,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/CARMEN DELIA SUAREZ DENIZ_410_COCINA_XX-XX-XXXX_251586.pdf,1613543,,2024-01-25 18:06:31,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/ELENIR VAZQUEZ TERCERO_410_COCINA_XX-XX-XXXX_0047228.pdf,1230883,,2024-04-11 13:57:41,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/ELENIR VAZQUEZ TERCERO_410_COCINA_XX-XX-XXXX_0150046.pdf,1247018,,2023-12-30 21:04:51,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/ENRIQUE ALAMO GARCIA_410_COCINA_XX-XX-XXXX_0195186.pdf,1264556,,2023-12-30 20:54:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/FRANCISCO LEON RODRIGUEZ_410_COCINA_XX-XX-XXXX_0129787.pdf,1177835,,2023-12-30 20:54:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/FRANCISCO MECA TRUJILLO_410_COCINA_XX-XX-XXXX_0294834.pdf,1265623,,2023-12-30 20:54:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/FRANCISCO RUYMAN ARTILES_410_COCINA_XX-XX-XXXX_0212287.pdf,1778119,,2024-11-10 21:42:17,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/ISATU MADINA BAH BAH_410_COCINA_XX-XX-XXXX_0227502.pdf,1293968,,2023-12-30 20:54:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/ISRAEL SANTANA SANTANA_410_COCINA_XX-XX-XXXX_0256273.pdf,1236440,,2023-12-30 20:54:21,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/JOSE LUIS ALGECIRAS GAHETE_410_COCINA_XX-XX-XXXX_0270580.pdf,1204947,,2023-12-30 20:54:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/JOSE LUIS ALGECIRAS GAHETE_410_COCINA_XX-XX-XXXX_0309892.pdf,1200092,,2025-02-06 10:00:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/JOSE MANUEL ESTUPIÑAN PEÑA_410_COCINA_XX-XX-XXXX_0240799.pdf,1154331,,2023-12-30 20:54:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/JOSE MANUEL ORTEGA GONZALEZ_410_COCINA_XX-XX-XXXX_0271377.pdf,1140970,,2025-01-16 10:10:53,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/JOSE OLEGARIO SUAREZ LEON_410_COCINA_XX-XX-XXXX_0408373.pdf,1121396,,2024-01-14 13:27:54,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/LEYDA COROMOTO RODRIGUEZ CARREÑO_410_COCINA_XX-XX-XXXX_0274311.pdf,1045885,,2023-12-30 20:54:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/LEYDA COROMOTO RODRIGUEZ CARREÑO_410_COCINA_XX-XX-XXXX_274311.pdf,1045885,,2023-12-30 20:52:58,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/LUCREZIA PLASCIANO_410_COCINA_XX-XX-XXXX_0176103.pdf,1051613,,2023-12-30 20:54:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/LUCREZIA PLASCIANO_410_COCINA_XX-XX-XXXX_0181012.pdf,1037608,,2023-12-30 20:54:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/MARIA ISABEL DIAZ CABRERA_410_COCINA_XX-XX-XXXX_0175543.pdf,1093950,,2024-08-22 09:48:03,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/MARIA NOELIA CARRACEDO_410_COCINA_XX-XX-XXXX_0098159.pdf,953455,,2023-12-30 20:54:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/MARIA NOELIA CARRACEDO_410_COCINA_XX-XX-XXXX_0136870.pdf,964677,,2023-12-30 20:54:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/MARIA NOELIA CARRACEDO_410_COCINA_XX-XX-XXXX_0148902.pdf,955532,,2023-12-30 20:54:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/MARIA NOELIA CARRACEDO_410_COCINA_XX-XX-XXXX_0161818.pdf,893872,,2023-12-30 20:54:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/MARIA NOELIA CARRACEDO_410_COCINA_XX-XX-XXXX_0198934.pdf,1027758,,2023-12-30 20:54:21,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/MARIA NOELIA CARRACEDO_410_COCINA_XX-XX-XXXX_0213846.pdf,972614,,2023-12-30 20:54:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/MARIA NOELIA CARRACEDO_410_COCINA_XX-XX-XXXX_0224349.pdf,978883,,2023-12-30 20:54:23,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/MARIA NOELIA CARRACEDO_410_COCINA_XX-XX-XXXX_0232399.pdf,952881,,2023-12-30 20:54:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/MARIA NOELIA CARRACEDO_410_COCINA_XX-XX-XXXX_0258678.pdf,977517,,2023-12-30 20:54:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/MARIA NOELIA CARRACEDO_410_COCINA_XX-XX-XXXX_0266605.pdf,946815,,2023-12-30 20:54:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/MARLIN KATIUSKA BLANCO RODRIGUEZ_410_COCINA_XX-XX-XXXX_0297208.pdf,1113664,,2023-12-30 20:54:21,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/MARLIN KATIUSKA BLANCO RODRIGUEZ_410_COCINA_XX-XX-XXXX_0310551.pdf,1180777,,2023-12-30 20:54:23,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/NADIYA VIKTORIV KALYNIAK_410_COCINA_XX-XX-XXXX_0108528.pdf,1101120,,2024-08-16 10:40:33,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/NADIYA VIKTORIV KALYNIAK_410_COCINA_XX-XX-XXXX_0307877.pdf,1144298,,2025-03-06 10:47:47,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/RENI ALEXANDER OZORIA MADE_410_COCINA_XX-XX-XXXX_0016278.pdf,1184746,,2023-12-30 20:54:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/RENI ALEXANDER OZORIA MADE_410_COCINA_XX-XX-XXXX_0026128.pdf,1107164,,2023-12-30 21:04:51,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/RICARDO ANDRES ALDAY_410_COCINA_XX-XX-XXXX_0078016.pdf,1230919,,2023-12-30 20:54:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/COCINA/ROMAN OLIVEIRO RUIZ SUAREZ_410_COCINA_XX-XX-XXXX_0180035.pdf,1262841,,2023-12-30 20:54:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/DIRECCION/DANIEL TRUJILLO GOMBERT_410_DIRECCION_XX-XX-XXXX_0028662.pdf,1122521,,2023-12-30 20:54:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/ECONOMATO/ANTONIO JUAN ARMAS PEREZ_410_ECONOMATO_XX-XX-XXXX_0057810.pdf,1117004,,2023-12-30 20:54:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/ECONOMATO/FELIX JAVIEL BARRERAAS RODRIGUEZ_410_ECONOMATO_XX-XX-XXXX_0212286.pdf,1190334,,2024-11-10 21:37:37,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/ECONOMATO/FELIX JAVIEL BARRERAS RODRIGUEZ_410_ECONOMATO_XX-XX-XXXX_0019296.pdf,1223424,,2024-04-11 13:57:43,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/ECONOMATO/FELIX JAVIEL BARRERAS RODRIGUEZ_410_ECONOMATO_XX-XX-XXXX_03228518.pdf,2636728,,2024-02-17 21:51:27,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/AMINATA SARR_410_PISOS_XX-XX-XXXX_0360602.pdf,1111045,,2025-03-06 12:01:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/AYTANA MARLEN TOLEDO LOSADA_410_PISOS_XX-XX-XXXX_0292107.pdf,1219803,,2025-03-06 10:40:50,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/ESTHER GUERRA BAYON_410_PISOS_XX-XX-XXXX_0241785.pdf,1138286,,2023-12-30 20:54:23,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/FRANCISCO JONAT GUERRA BOLAÑOS_410_PISOS_XX-XX-XXXX_0086826.pdf,1051113,,2024-06-19 10:57:01,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/JENNIFER PAOLA PINILLA OCAMPO_410_PISOS_XX-XX-XXXX_0350605.pdf,1133676,,2025-03-06 11:29:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/LUIS MIGUEL CASTELLANO SUAREZ_410_PISOS_XX-XX-XXXX_0085206.pdf,1170531,,2023-12-30 20:54:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARIA GENOVEVA CUESTA RODRIGUEZ_410_PISOS_XX-XX-XXXX_0108526.pdf,1173162,,2023-12-30 20:54:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARIA GENOVEVA CUESTA RODRIGUEZ_410_PISOS_XX-XX-XXXX_0108527.pdf,1025452,,2024-08-16 10:37:33,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARIA IVETTE SOLER GONZALEZ_410_PISOS_XX-XX-XXXX_0268848.pdf,1659376,,2024-12-26 10:53:49,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARIA JESUS CHIRINO LOPEZ_410_PISOS_XX-XX-XXXX_0192561.pdf,1092004,,2024-08-22 12:57:20,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARIA MERCEDEZ CABRERA PEREZ_410_PISOS_XX-XX-XXXX_0278041.pdf,1759528,,2024-12-26 10:51:45,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_0011532.pdf,3211905,,2024-01-25 18:05:52,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_002102.pdf,3152602,,2024-01-25 18:05:56,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_0028522.pdf,3357312,,2024-01-25 18:05:47,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_0037004.pdf,3393436,,2024-01-25 18:05:52,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_0044357.pdf,3285776,,2024-01-25 18:05:52,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_0066512.pdf,3158580,,2024-01-25 18:05:51,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_0115532.pdf,3439072,,2024-01-25 18:05:48,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_0144606.pdf,3282914,,2024-01-25 18:05:50,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_0159589.pdf,3014261,,2024-01-25 18:05:49,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_0173130.pdf,3202141,,2024-01-25 18:05:50,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_0316187.pdf,3383794,,2024-01-25 18:05:48,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_187540.pdf,2746564,,2024-01-25 18:05:47,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_53296.pdf,2511806,,2024-01-25 18:05:46,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MARLENE MARTINEZ SOLAYA_410_PISOS_XX-XX-XXXX_71371.pdf,1189662,,2024-01-25 18:05:46,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MEIVY DE LA CARIDAD PEREZ SOTERLO_410_PISOS_XX-XX-XXXX_0343755.pdf,1106349,,2025-03-06 11:57:12,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MINERVA OJEDA CAMEJO_410_PISOS_XX-XX-XXXX_0177691.pdf,3216262,,2024-01-25 18:05:43,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/MINERVA OJEDA CAMEJO_410_PISOS_XX-XX-XXXX_0271979.pdf,3217667,,2024-01-25 18:05:44,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/NATALI AYLEN PIRIS_410_PISOS_XX-XX-XXXX_0254677.pdf,1653996,,2024-12-26 10:46:47,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/NURIA ESTHER CASTRO ALVAREZ_410_PISOS_XX-XX-XXXX_0012217.pdf,1288808,,2024-04-11 13:57:50,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/NURIA ESTHER LORENZO OJEDA_410_PISOS_XX-XX-XXXX_0201527.pdf,1217306,,2024-08-23 09:56:21,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/RICARDO NAVARRO PEREZ_410_PISOS_XX-XX-XXXX_0183867.pdf,1121254,,2024-01-05 17:30:39,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/RICARDO NAVARRO PEREZ_410_PISOS_XX-XX-XXXX_0292479.pdf,1063940,,2024-06-19 10:46:30,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/SANAE BOUDAMOUSSI_410_PISOS_XX-XX-XXXX_0243066.pdf,1124386,,2024-11-10 21:47:13,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX.pdf,2517715,,2024-01-25 18:05:58,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0011499.pdf,3287323,,2024-01-25 18:05:56,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0014004.pdf,3385980,,2024-01-25 18:05:57,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0019211.pdf,3547040,,2024-01-25 18:06:02,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0021095.pdf,2226922,,2024-01-25 18:05:57,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0025124.pdf,3675164,,2024-01-25 18:06:00,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0037647.pdf,3541358,,2024-01-25 18:06:06,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0040969.pdf,4400480,,2024-01-25 18:05:58,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0050715.pdf,3833110,,2024-01-25 18:06:07,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0065643.pdf,3295305,,2024-01-25 18:05:59,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0080645.pdf,3277596,,2024-01-25 18:06:11,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0082013.pdf,3456730,,2024-01-25 18:05:59,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0092386.pdf,3251463,,2024-01-25 18:06:08,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0097781.pdf,3554651,,2024-01-25 18:06:01,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0097889.pdf,3583935,,2024-01-25 18:06:01,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0105097.pdf,3157973,,2024-01-25 18:06:09,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0115522.pdf,3719324,,2024-01-25 18:06:04,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0122585.pdf,2107203,,2024-01-25 18:06:10,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0125388.pdf,3440435,,2024-01-25 18:06:03,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0147888.pdf,3414792,,2024-01-25 18:06:02,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0165990.pdf,3218614,,2024-01-25 18:06:06,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0177649.pdf,3427091,,2024-01-25 18:06:03,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0193254.pdf,3522321,,2024-01-25 18:06:07,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0194750.pdf,3503384,,2024-01-25 18:06:09,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0211225.pdf,3195006,,2024-01-25 18:06:04,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0249700.pdf,3355664,,2024-01-25 18:06:03,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TANAUSU ARMAS GARCIA_410_PISOS_XX-XX-XXXX_0274861.pdf,3608431,,2024-01-25 18:06:08,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TRINIDAD DIAZ SUAREZ_410_PISOS_XX-XX-XXXX_0184507.pdf,1136176,,2023-12-30 20:54:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/TRINIDAD DIAZ SUAREZ_410_PISOS_XX-XX-XXXX_0240798.pdf,1147596,,2023-12-30 20:54:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/VANESA ESPINO RAMIREZ_410_PISOS_XX-XX-XXXX_0184270.pdf,979630,,2023-12-30 21:04:50,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/PISOS/ZAYRA ALTANAIS MENDOZA GONZALEZ_410_PISOS_XX-XX-XXXX_0315199.pdf,1213111,,2023-12-30 20:54:23,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RECEPCION/ANA ELISA GAMOUSSE BOLAÑOS_410_RECEPCION_XX-XX-XXXX_0150045.pdf,1204731,,2023-12-30 20:54:23,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RECEPCION/ANA ELISA GAMOUSSE BOLAÑOS_410_RECEPCION_XX-XX-XXXX_0170829.pdf,1171126,,2023-12-30 20:54:23,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RECEPCION/BRUNO AFONSO MESA_410_RECEPCION_XX-XX-XXXX_0223145.pdf,1217468,,2024-11-10 21:36:27,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RECEPCION/CAMILA DI SANTO_410_RECEPCION_XX-XX-XXXX_0042441.pdf,1178973,,2023-12-30 20:54:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RECEPCION/LAURA DIAZ RODRIGUEZ_410_RECEPCION_XX-XX-XXXX_0234469.pdf,1132956,,2023-12-30 20:54:23,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RECEPCION/PATRICIA GODOY AGUERA_410_RECEPCION_XX-XX-XXXX_0072821.pdf,1888920,,2024-06-13 09:36:15,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RECEPCION/RAQUEL HIERRO NAVARRO_410_RECEPCION_XX-XX-XXXX_0150048.pdf,1218534,,2024-01-14 13:27:52,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RECEPCION/YAIZA ARIANE MUHREN ZACCARO_410_RECEPCION_XX-XX-XXXX_0039660.pdf,2505360,,2024-05-09 13:19:39,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RECEPCION/YANIRA DE LA CA SANCHEZ ORTEGA_410_RECEPCION_XX-XX-XXXX_0424735.pdf,2446543,,2024-05-09 13:19:45,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RECEPCION/YOELKIS CARRANDI NOA_410_RECEPCION_XX-XX-XXXX_0271378.pdf,1681501,,2024-12-26 10:41:59,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/AMINE AGNESS_410_RESTAURANTE_XX-XX-XXXX_0201643.pdf,1119099,,2024-08-23 10:09:15,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/ANGEL GALVEZ GIL_410_RESTAURANTE_XX-XX-XXXX_0163115.pdf,1130625,,2024-08-22 12:56:21,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/ANIBAL JOSE LLOVEL ALONSO_410_RESTAURANTE_XX-XX-XXXX_0222315.pdf,1264123,,2023-12-30 20:54:23,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/ANIBAL JOSE LLOVEL ALONSO_410_RESTAURANTE_XX-XX-XXXX_0222316.pdf,1263478,,2023-12-30 20:54:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/ARACELI PARRA ESTEBAN_410_RESTAURANTE_XX-XX-XXXX_0059432.pdf,2495484,,2024-05-09 13:19:46,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/CARLOS ALBERTO HERRERA ROJAS_410_RESTAURANTE_XX-XX-XXXX_0102313.pdf,1196629,,2023-12-30 20:54:23,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/CARLOS GARCIA HERNANDEZ_410_RESTAURANTE_XX-XX-XXXX_0017734.pdf,2465439,,2023-12-30 20:54:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/CYNTHIA JIMENEZ GARCIA_410_RESTAURANTE_XX-XX-XXXX_0120539.pdf,1096889,,2024-08-16 11:16:17,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/DARIA NOEMI TRIGO CAÑETE_410_RESTAURANTE_XX-XX-XXXX_0234472.pdf,1170829,,2024-01-29 12:26:13,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/DENISE KRYSTLE MEYKEL_410_RESTAURANTE_XX-XX-XXXX_0287669.pdf,984399,,2024-06-19 10:50:19,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/EDUARDO MARTINEZ CAMARERO_410_RESTAURANTE_XX-XX-XXXX_0265916.pdf,1526898,,2024-06-19 09:45:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/FABRIZIO CASTAÑEDA BRITO_410_RESTAURANTE_XX-XX-XXXX_0038421.pdf,1226806,,2024-04-11 13:57:45,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/FABRIZIO CASTAÑEDA BRITO_410_RESTAURANTE_XX-XX-XXXX_0049430.pdf,1227128,,2023-12-30 20:54:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/FABRIZIO CASTAÑEDA BRITO_410_RESTAURANTE_XX-XX-XXXX_0078179.pdf,1194233,,2023-12-30 21:04:52,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/HENRY MEDARDO AYALA LOPEZ_410_RESTAURANTE_XX-XX-XXXX_0142103.pdf,3605716,,2024-01-25 18:06:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/HENRY MEDARDO AYALA LOPEZ_410_RESTAURANTE_XX-XX-XXXX_0160368.pdf,586242,,2024-01-25 18:06:19,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/HENRY MEDARDO AYALA LOPEZ_410_RESTAURANTE_XX-XX-XXXX_0186267.pdf,3414392,,2024-01-25 18:06:18,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/HENRY MEDARDO AYALA LOPEZ_410_RESTAURANTE_XX-XX-XXXX_0249969.pdf,3459053,,2024-01-25 18:06:20,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/HENRY MEDARDO AYALA LOPEZ_410_RESTAURANTE_XX-XX-XXXX_0269311.pdf,3418612,,2024-01-25 18:06:21,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/HENRY MEDARDO AYALA LOPEZ_410_RESTAURANTE_XX-XX-XXXX_0274853.pdf,3632337,,2024-01-25 18:06:19,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/JESSICA CAMPOS GRANDA_410_RESTAURANTE_XX-XX-XXXX_0129743.pdf,1163038,,2023-12-30 20:54:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/JOSE CARLOS CACERES ACOSTA_410_RESTAURANTE_XX-XX-XXXX_0302455.pdf,1218159,,2023-12-30 20:54:23,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/JOSEFA HERNANDEZ MORENO_410_RESTAURANTE_XX-XX-XXXX_0168150.pdf,1047527,,2023-12-30 20:54:21,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/JUAN CARLOS MIKULA SANTANA_410_RESTAURANTE_XX-XX-XXXX_0154601.pdf,1177925,,2023-12-30 21:04:49,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/KEVIN JIMENEZ CASTILLO_410_RESTAURANTE_XX-XX-XXXX_0210591.pdf,993809,,2023-12-30 21:04:47,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/KEVIN PEREZ RODRIGUEZ_410_RESTAURANTE_XX-XX-XXXX_0050820.pdf,1104091,,2024-01-05 17:30:38,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/KEVIN PEREZ RODRIGUEZ_410_RESTAURANTE_XX-XX-XXXX_0087564.pdf,2679365,,2024-01-25 18:04:54,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/LEILA VANESA DI FIRMA_410_RESTAURANTE_XX-XX-XXXX_0241872.pdf,1008716,,2023-12-30 20:54:21,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/MARCOS AGUILAR HERNANDEZ_410_RESTAURANTE_XX-XX-XXXX_0137656.pdf,1136112,,2023-12-30 20:54:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/MARIA PINO PEREZ MORENO_410_RESTAURANTE_XX-XX-XXXX_256434.pdf,1647874,,2024-01-25 18:06:32,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/MARIELA DEBORA MARTINEZ PEREIRA_410_RESTAURANTE_XX-XX-XXXX_0234471.pdf,1107639,,2024-01-05 17:30:39,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/MARIELA DEBORA MARTINEZ PEREIRA_410_RESTAURANTE_XX-XX-XXXX_0294163.pdf,1140453,,2023-12-30 20:54:21,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/MARJORIE VEGA MEDINA_410_RESTAURANTE_XX-XX-XXXX_0219604.pdf,1209223,,2024-11-10 21:44:58,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/MARJORIE VEGA MEDINA_410_RESTAURANTE_XX-XX-XXXX_0243079.pdf,1211664,,2024-11-10 21:45:58,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/MOHAMED DULAMIN SAMBE KANE_410_RESTAURANTE_XX-XX-XXXX_0017735.pdf,1119983,,2023-12-30 20:54:25,,No existe en iCloud con la misma ruta
+refresh_icloud_mtime_or_content,410/RESTAURANTE/OMAIRA ALONSO SUAREZ_410_RESTAURANTE_AYTE CAMARERO_19-10-2022_DANIEL SANTANA SANTANA_0294164.pdf,1152430,1152430,2026-03-15 14:36:35,2023-12-30 20:52:59,NAS más reciente
+copy_missing_to_icloud,410/RESTAURANTE/OMAIRA ALONSO SUAREZ_410_RESTAURANTE_XX-XX-XXXX_0087565.pdf,1190486,,2023-12-30 20:54:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/PABLO JOSE BETANCOR GONZALEZ_410_RESTAURANTE_XX-XX-XXXX_01827228.pdf,1090470,,2025-02-06 09:57:27,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/PABLO JOSE BETANCOR GONZALEZ_410_RESTAURANTE_XX-XX-XXXX_0322775.pdf,1150176,,2025-03-06 11:44:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/PAOLA TRUJILLO RIVERO_410_RESTAURANTE_XX-XX-XXXX_0360604.pdf,1114050,,2025-03-06 11:53:38,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/PAVEL VALDES PERDOMO_410_RESTAURANTE_XX-XX-XXXX_0017733.pdf,2476236,,2024-01-25 18:06:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/PEDRO DANIEL JIMENEZ RODRIGUEZ_410_RESTAURANTE_XX-XX-XXXX_0292480.pdf,1057656,,2024-06-19 10:39:21,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/PEDRO JUAN SAAVEDRA LUJAN_410_RESTAURANTE_XX-XX-XXXX_0058523.pdf,1140555,,2024-01-14 13:27:53,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/PEDRO JUAN SAAVEDRA LUJAN_410_RESTAURANTE_XX-XX-XXXX_0339283.pdf,1463191,,2024-10-30 12:17:30,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/RAFAEL ANTONIO GONZALEZ NOBLIA_410_RESTAURANTE_XX-XX-XXXX_0037305.pdf,1144240,,2023-12-30 20:54:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/RAFAEL ANTONIO GONZALEZ NOBLIA_410_RESTAURANTE_XX-XX-XXXX_0053757.pdf,1141915,,2023-12-30 20:54:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/RAIMOND ALAMO SUAREZ_410_RESTAURANTE_XX-XX-XXXX_0102311.pdf,1233141,,2023-12-30 20:54:21,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/RAIMOND ALAMO SUAREZ_410_RESTAURANTE_XX-XX-XXXX_0304723.pdf,1105871,,2023-12-30 20:54:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/ROEL ROBERTO HERNANDEZ VEGA_410_RESTAURANTE_XX-XX-XXXX_0015502.pdf,2418517,,2024-05-09 13:19:43,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/VICTOR AARON ESPINOSA TORRES_410_RESTAURANTE_XX-XX-XXXX_0174309.pdf,1163252,,2023-12-30 20:54:23,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/WITMAN ALEXIS MUÑOZ RESTREPO_410_RESTAURANTE_XX-XX-XXXX_0051616.pdf,3378837,,2024-01-25 18:05:54,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/RESTAURANTE/ZULAY JIMENEZ HERNANDEZ_410_RESTAURANTE_XX-XX-XXXX_0220586.pdf,1137481,,2023-12-30 21:04:43,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SPA/CHRISTIAN MONZON GIL_410_SPA_XX-XX-XXXX_0028553.pdf,1130806,,2023-12-30 20:54:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SPA/GEMA CALVETE RODRIGUEZ_410_SPA_XX-XX-XXXX_0170534.pdf,1033101,,2023-12-30 20:54:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/ALEXANDER SCHUBERT_410_SSTT_JEFE DE EQUIPO 22 06 2009 MAHY DE LOS REYES RAVEL_XX-XX-XXXX_0121507.pdf,3177741,,2024-01-25 18:05:39,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/ANTONIO LUIS BENITEZ NAVARRO_410_SSTT_XX-XX-XXXX_0223677.pdf,1020757,,2023-12-30 20:54:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/ANTONIO LUIS BENITEZ NAVARRO_410_SSTT_XX-XX-XXXX_0269306.pdf,980310,,2023-12-30 20:54:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/ARIDANE ARBELO HERNANDEZ_410_SSTT_XX-XX-XXXX_0223146.pdf,1135952,,2024-11-10 21:35:17,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/BADAYCO GONZALEZ CUBAS_410_SSTT_XX-XX-XXXX_0049429.pdf,1232708,,2023-12-30 20:54:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/CRISTOBAL ELISE VEGA SANCHEZ_410_SSTT_XX-XX-XXXX_0250904.pdf,1062567,,2024-06-19 09:51:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/ELDER FRANCISCO MEDINA ABRADELO_410_SSTT_XX-XX-XXXX_0355319.pdf,1087724,,2025-03-06 11:34:44,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/EMERSON ARGEIN MONTAÑO MORENO_410_SSTT_XX-XX-XXXX_0315200.pdf,1220630,,2023-12-30 20:54:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/ERIK DELDADO RAMIREZ_410_SSTT_XX-XX-XXXX_0309649.pdf,1228034,,2023-12-30 20:54:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/JAIME ALBERTO USUGA GONZALEZ_410_SSTT_XX-XX-XXXX_0249869.pdf,1131353,,2023-12-30 20:54:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/JOSE ANTONIO MEDINA ALAMO_410_SSTT_XX-XX-XXXX_0087233.pdf,2684165,,2024-05-09 13:19:35,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/JUAN LUIS SARMIENTO SUAREZ_410_SSTT_XX-XX-XXXX_0056539.pdf,1804995,,2024-06-13 09:25:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/JUAN LUIS SARMIENTO SUAREZ_410_SSTT_XX-XX-XXXX_0084769.pdf,1883750,,2024-06-13 09:26:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/MARCIAL HERNANDEZ GODOY_410_SSTT_XX-XX-XXXX_0070132.pdf,5105769,,2024-04-11 13:57:42,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/MARIANO ENRIQUE SERRANO FERNANDEZ_410_SSTT_XX-XX-XXXX_0026709.pdf,1132727,,2023-12-30 20:54:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/OUSMANE SYLLA_410_SSTT_XX-XX-XXXX_0072343.pdf,1211185,,2023-12-30 21:04:45,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/RUBEN GONZALEZ TRUJILLO_410_SSTT_XX-XX-XXXX_0312884.pdf,1217447,,2023-12-30 20:54:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/TANAUSU ARMAS GARCIA_410_SSTT_XX-XX-XXXX_0179328.pdf,890391,,2024-01-25 18:06:10,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/VICTOR MANUEL MENDEZ MIRANDA_410_SSTT_XX-XX-XXXX_0100093.pdf,1199769,,2024-01-05 17:30:44,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,410/SSTT/VICTOR MANUEL MENDEZ MIRANDA_410_SSTT_XX-XX-XXXX_0150047.pdf,2816109,,2024-01-25 18:06:30,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,420/SSTT/ISAIAS SILVA QUINTERO_420_SSTT_XX-XX-XXXX_022055601.pdf,922506,,2024-05-09 13:19:42,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,421/PISOS/GABRIEL VEGA SUAREZ_421_PISOS_XX-XX-XXXX_009533101.pdf,2907160,,2024-01-25 18:06:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/ECONOMATO/MARIA ROSA PEREZ VIVAS_502_ECONOMATO_XX-XX-XXXX_0046793.pdf,2011560,,2024-01-25 18:06:30,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/ECONOMATO/MARIA ROSA PEREZ VIVAS_502_ECONOMATO_XX-XX-XXXX_00467931.pdf,946561,,2024-01-25 18:06:30,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ABENOHARA DIAZ TEJERA_502_PISOS_CAMARERA DE PISOS_XX-XX-XXXX_0026257.pdf,1237528,,2023-12-30 20:55:30,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ABENOHARA DIAZ TEJERA_502_PISOS_CAMARERA DE PISOS_XX-XX-XXXX_00262571.pdf,448330,,2023-12-30 20:55:27,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ACORAIMA HERRERA LANZAS_502_PISOS_XX-XX-XXXX_03414251.pdf,445214,,2023-12-30 20:55:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/AINHOA OLIVA GUERRA_502_PISOS_XX-XX-XXXX_0120540.pdf,1017782,,2024-08-16 11:21:06,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/AINHOA OLIVA GUERRA_502_PISOS_XX-XX-XXXX_0233311.pdf,3441484,,2024-01-25 18:05:42,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/AINHOA OLIVA GUERRA_502_PISOS_XX-XX-XXXX_0294835.pdf,1206755,,2023-12-30 20:55:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/AINHOA OLIVA GUERRA_502_PISOS_XX-XX-XXXX_02948351.pdf,434647,,2024-04-11 13:57:42,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/AINHOA OLIVA GUERRA_502_PISOS_XX-XX-XXXX_2333101.pdf,1619033,,2024-01-25 18:05:46,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/AMINATA SARR_502_PISOS_XX-XX-XXXX_0233641.pdf,1230456,,2023-12-30 20:55:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/AMINATA SARR_502_PISOS_XX-XX-XXXX_023364101.pdf,905284,,2024-02-17 21:51:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANA BANESA NAVARRO MARTIN_502_PISOS_XX-XX-XXXX_0011089.pdf,1054850,,2024-01-05 17:30:40,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANA BANESA NAVARRO MARTIN_502_PISOS_XX-XX-XXXX_00110891.pdf,443364,,2024-01-05 17:30:45,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANA BANESA NAVARRO MARTIN_502_PISOS_XX-XX-XXXX_0020395.pdf,1063890,,2023-12-30 20:55:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANA BANESA NAVARRO MARTIN_502_PISOS_XX-XX-XXXX_0220588.pdf,1048691,,2024-01-05 17:30:45,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANA BANESA NAVARRO MARTIN_502_PISOS_XX-XX-XXXX_02205881.pdf,369891,,2024-06-19 10:06:33,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANA BELEN MEDINA RAMOS_502_PISOS_XX-XX-XXXX_0067205.pdf,1017176,,2024-01-05 17:30:44,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANA CATHAISA MEDINA CUBAS_502_PISOS_XX-XX-XXXX_0175544.pdf,1080890,,2024-08-23 10:24:54,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANA CECILIA GARCIA ALVAREZ_502_PISOS_XX-XX-XXXX_0120541.pdf,1282242,,2024-08-16 11:12:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANA CECILIA GARCIA ALVAREZ_502_PISOS_XX-XX-XXXX_0284909.pdf,1205252,,2023-12-30 20:55:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANA CECILIA GARCIA ALVAREZ_502_PISOS_XX-XX-XXXX_02849091.pdf,443158,,2024-04-11 13:57:43,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANTA THIOUNE_502_PISOS_XX-XX-XXXX_0008708.pdf,1195766,,2023-12-30 20:53:07,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANTA THIOUNE_502_PISOS_XX-XX-XXXX_000870801.pdf,444166,,2023-12-30 20:55:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANTA THIOUNE_502_PISOS_XX-XX-XXXX_0011086.pdf,2269650,,2024-01-25 18:04:54,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANTA THIOUNE_502_PISOS_XX-XX-XXXX_00110861.pdf,438150,,2023-12-30 20:55:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANTA THIOUNE_502_PISOS_XX-XX-XXXX_0180037.pdf,1305686,,2023-12-30 20:55:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANTA THIOUNE_502_PISOS_XX-XX-XXXX_0207810.pdf,2383005,,2024-01-25 18:04:54,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ANTA THIOUNE_502_PISOS_XX-XX-XXXX_020781001.pdf,920378,,2024-01-25 18:04:53,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/AROA DEL CARMEN PEÑA HERNANDEZ_502_PISOS_XX-XX-XXXX_0180038.pdf,1271493,,2023-12-30 20:55:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/AROA DEL CARMEN PEÑA HERNANDEZ_502_PISOS_XX-XX-XXXX_0284534.pdf,1155373,,2023-12-30 20:53:02,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/AROA DEL CARMEN PEÑA HERNANDEZ_502_PISOS_XX-XX-XXXX_02845341.pdf,450775,,2023-12-30 20:55:27,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/AROA VALENCIA GARCIA_502_PISOS_XX-XX-XXXX_0116748.pdf,1797407,,2024-06-13 09:40:43,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ASTRID ALVAREZ NAVARRO_502_PISOS_XX-XX-XXXX_0056200.pdf,508030,,2023-12-30 20:55:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/BENEDICTA SANCHEZ HERNANDEZ_502_PISOS_XX-XX-XXXX_0076034.pdf,2571292,,2024-05-09 13:19:33,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/BRUNILDA OLIVA CRUZ_502_PISOS_XX-XX-XXXX_0129789.pdf,1327757,,2023-12-30 20:55:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/BRUNILDA OLIVA CRUZ_502_PISOS_XX-XX-XXXX_012978901.pdf,432760,,2023-12-30 20:55:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/BRUNILDA OLIVA CRUZ_502_PISOS_XX-XX-XXXX_0309650.pdf,1205676,,2023-12-30 20:55:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/BRUNILDA OLIVA CRUZ_502_PISOS_XX-XX-XXXX_03096501.pdf,429559,,2024-04-11 13:57:49,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/CARMEN MARIA MONTESDEOCA SEGURA_502_PISOS_XX-XX-XXXX_0011085.pdf,1059143,,2024-01-05 17:30:43,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/CARMEN MARIA MONTESDEOCA SEGURA_502_PISOS_XX-XX-XXXX_0093442.pdf,1738579,,2024-06-13 10:05:38,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/CARMEN MARIA MONTESDEOCA SEGURA_502_PISOS_XX-XX-XXXX_0220587.pdf,1058119,,2024-01-05 17:30:42,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/CARMEN MARIA MONTESDEOCA SEGURA_502_PISOS_XX-XX-XXXX_02205871.pdf,365036,,2024-06-19 10:05:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/CARMEN MARIA MONTESDEOCA SEGURA_502_PISOS_XX-XX-XXXX_033939701.pdf,895246,,2023-12-30 20:55:27,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/CAROLINA PEREZ QUINTANA_502_PISOS_XX-XX-XXXX_0027191.pdf,1029251,,2024-01-05 17:30:38,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/CAROLINA VEGA QUINTANA_502_PISOS_XX-XX-XXXX_0207814.pdf,2472972,,2024-01-25 18:04:55,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/CINDY PAOLA ALBIS LEON_502_PISOS_XX-XX-XXXX_0052319.pdf,1196124,,2024-04-11 13:57:47,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/CINDY PAOLA ALBIS LEON_502_PISOS_XX-XX-XXXX_00523191.pdf,365461,,2024-08-16 10:58:44,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/CINDY PAOLA ALBIS LEON_502_PISOS_XX-XX-XXXX_0201528.pdf,1116300,,2024-08-23 10:11:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/CRISTINA DE LUJ GALLO GERRY_502_PISOS_XX-XX-XXXX_0015507.pdf,2294012,,2024-05-09 13:19:44,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/DARIANNY CHANCI USUGA_502_PISOS_XX-XX-XXXX_0165410.pdf,1120088,,2024-08-22 10:11:01,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/DARIANNY CHANCI USUGA_502_PISOS_XX-XX-XXXX_016541001.pdf,614570,,2024-12-26 11:00:43,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/DAYHARA MARJORI TICONA HANCCO_502_PISOS_XX-XX-XXXX_0284533.pdf,1146124,,2023-12-30 20:52:57,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/DAYHARA MARJORI TICONA HANCCO_502_PISOS_XX-XX-XXXX_02845331.pdf,447513,,2023-12-30 20:55:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/DEBORA LLANO VEGA_502_PISOS_XX-XX-XXXX_0059602.pdf,1595950,,2024-06-13 10:01:16,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/DEBORA LLANO VEGA_502_PISOS_XX-XX-XXXX_0274318.pdf,906808,,2024-06-19 10:24:00,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/DEBORA LLANO VEGA_502_PISOS_XX-XX-XXXX_027431801.pdf,369179,,2024-06-19 10:42:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/DEBORA LLANO VEGA_502_PISOS_XX-XX-XXXX_031658101.pdf,465796,,2024-01-05 17:30:45,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/DJENEBA KANE_502_PISOS_XX-XX-XXXX_0212288.pdf,1693877,,2024-10-16 13:43:11,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/DJENEBA KANE_502_PISOS_XX-XX-XXXX_021228801.pdf,366810,,2025-03-06 10:57:43,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/DUNIA PASTOR OCAMPO MACIAS_502_PISOS_XX-XX-XXXX_0104445.pdf,1104417,,2024-06-06 09:36:42,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/EIDA NBIA ANTURI QUINTERO_502_PISOS_XX-XX-XXXX_02845351.pdf,443345,,2023-12-30 20:55:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/EIDA NIBIA ANTIURI QUINTERO_502_PISOS_XX-XX-XXXX_0284535.pdf,1141832,,2023-12-30 20:53:03,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ELIANY LEON QUICUTIS_502_PISOS_XX-XX-XXXX_0207811.pdf,1053150,,2024-01-05 17:30:42,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ELIANY LEON QUICUTIS_502_PISOS_XX-XX-XXXX_020781101.pdf,437904,,2024-01-05 17:30:41,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ELIZABETH GARCIA SUAREZ_502_PISOS_XX-XX-XXXX_0037969.pdf,1031416,,2023-12-30 21:04:52,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/EMILSEN ARDILA GOMEZ_502_PISOS_XX-XX-XXXX_0344815.pdf,1194839,,2024-04-11 13:57:48,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ERIKA DEL PINO MORALES RODRIGUEZ_502_PISOS_XX-XX-XXXX_0163123.pdf,1128124,,2024-08-22 09:37:17,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ERISELY LEYVA DESPAIGNE_502_PISOS_XX-XX-XXXX_0066625.pdf,2408325,,2024-05-09 13:19:41,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ERMINDA PEDROZA SALCEDO_502_PISOS_XX-XX-XXXX_0165409.pdf,1078993,,2024-08-22 12:39:23,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ETHEL ROCIO PEREIRA URAN_502_PISOS_XX-XX-XXXX_0137095.pdf,1293961,,2023-12-30 20:55:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/EVA MARIA MARTINEZ HERRERA_502_PISOS_XX-XX-XXXX_0028646.pdf,1058734,,2023-12-30 20:55:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/FABIANA ANDREA OPORTO_502_PISOS_XX-XX-XXXX_0057683.pdf,2357821,,2024-05-09 13:19:40,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/FATIMA LOURDES VIERA SANTANA_502_PISOS_XX-XX-XXXX_0163117.pdf,1092609,,2024-08-22 10:09:39,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/FATMA EL BOUD_502_PISOS_XX-XX-XXXX_0027346.pdf,2286896,,2024-05-09 13:19:43,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/GABRIEL VEGA SUAREZ_502_PISOS_XX-XX-XXXX_0011088.pdf,2308270,,2024-01-25 18:06:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/GABRIEL VEGA SUAREZ_502_PISOS_XX-XX-XXXX_00110881.pdf,918220,,2024-01-25 18:06:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/GENOVEVA MOLINA LOPEZ_502_PISOS_XX-XX-XXXX_0057680.pdf,2355886,,2024-05-09 13:19:40,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/GEYSY BOLAÑOS CUESTA_502_PISOS_XX-XX-XXXX_0079402.pdf,1647818,,2024-06-13 09:16:04,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/HILDA ISABEL POLEGRE HERNANDEZ_502_PISOS_XX-XX-XXXX_0105688.pdf,1083091,,2024-06-06 09:54:07,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/IDELMYS RAMOS RODRIGUEZ_502_PISOS_XX-XX-XXXX_0170830.pdf,1229730,,2023-12-30 20:55:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ILENA HAYDE BLANCO SANTANA_502_PISOS_XX-XX-XXXX_02756711.pdf,430402,,2024-04-11 13:57:52,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ILENA HAYDEE BLANCO SANTANA_502_PISOS_XX-XX-XXXX_0078096.pdf,1252489,,2023-12-30 21:04:46,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ILENA HAYDEE BLANCO SANTANA_502_PISOS_XX-XX-XXXX_00780961.pdf,439529,,2023-12-30 20:55:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/ILENA HAYDEE BLANCO SANTANA_502_PISOS_XX-XX-XXXX_0275671.pdf,1178254,,2023-12-30 20:55:27,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/JENNIFER PAOLA PINILLA OCAMPO_502_PISOS_XX-XX-XXXX_0028654.pdf,1069289,,2023-12-30 20:55:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/JESSIKA ALEJANDRA URBANO LULIGO 2_502_PISOS_XX-XX-XXXX_0241791.pdf,1152683,,2023-12-30 20:55:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/JESSIKA ALEJANDRA URBANO LULIGO_502_PISOS_XX-XX-XXXX_0206967.pdf,1226633,,2023-12-30 20:55:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/JESSIKA ALEJANDRA URBANO LULIGO_502_PISOS_XX-XX-XXXX_02417911.pdf,437271,,2024-04-11 13:57:50,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/JOANA DEL PINO HERNANDEZ SOSA_502_PISOS_XX-XX-XXXX_0088722.pdf,2617110,,2024-05-09 13:19:35,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/JUAN RAMON ESPINOSA ARMAS_502_PISOS_XX-XX-XXXX_0019297.pdf,1228301,,2024-04-11 13:57:47,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/JULIANA ELIZABETH HUARINGA VALLE_502_PISOS_XX-XX-XXXX_0243542.pdf,1623786,,2024-12-26 10:55:46,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/KARIMA ZEKRI_502_PISOS_XX-XX-XXXX_0058369.pdf,2368260,,2024-05-09 13:19:40,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/LAZARA PIÑEIRO LIMA_502_PISOS_XX-XX-XXXX_0129608.pdf,1088271,,2024-08-16 11:27:11,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/LAZARA PIÑEIRO LIMA_502_PISOS_XX-XX-XXXX_01296081.pdf,370509,,2025-03-06 11:03:56,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/LILIANA DE JESUS LOPES_502_PISOS_XX-XX-XXXX_0042436.pdf,1206761,,2023-12-30 21:04:49,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/LUZ OFELIA VALVERDE MARTINEZ_502_PISOS_XX-XX-XXXX_141841.pdf,1262382,,2024-01-05 17:30:40,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MACARENA ERASMA SANTANA RODRIGUEZ_502_PISOS_XX-XX-XXXX_0088721.pdf,2649420,,2024-05-09 13:19:32,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MAIVILEIVA ALEXANDER ARMAS_502_PISOS_XX-XX-XXXX_0241790.pdf,1151216,,2023-12-30 20:55:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA AFONSO SUAREZ_502_PISOS_XX-XX-XXXX_0210111.pdf,1219583,,2023-12-30 20:55:27,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA ANTONIA DE LA GUARDIA ORTEGA_502_PISOS_XX-XX-XXXX_0011083.pdf,1069443,,2023-12-30 20:55:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA ANTONIA DE LA GUARDIA ORTEGA_502_PISOS_XX-XX-XXXX_001108301.pdf,447495,,2023-12-30 20:55:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA ANTONIA DE LA GUARDIA ORTEGA_502_PISOS_XX-XX-XXXX_0207808.pdf,1178248,,2023-12-30 20:55:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA ANTONIA DE LA GUARDIA ORTEGA_502_PISOS_XX-XX-XXXX_020780801.pdf,457028,,2023-12-30 20:55:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA CARMEN DARIAS NOBREGA_502_PISOS_XX-XX-XXXX_0079401.pdf,1916947,,2024-06-13 09:50:12,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA CARMEN GONZALEZ FIGUEREDO_502_PISOS_XX-XX-XXXX_0057682.pdf,2326168,,2024-05-09 13:19:40,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA DOMINGA MORENO SOZA_502_PISOS_XX-XX-XXXX_0060145.pdf,1290788,,2024-01-05 17:30:38,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA ELOISA MARTINEZ AGUILERA_502_PISOS_XX-XX-XXXX_0047231.pdf,1275091,,2024-04-11 13:57:48,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA INES NAVARRO BAEZ_502_PISOS_XX-XX-XXXX_0023708.pdf,1050993,,2024-01-05 17:30:38,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA INES NAVARRO BAEZ_502_PISOS_XX-XX-XXXX_00237081.pdf,653860,,2024-06-13 09:51:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA INES NAVARRO BAEZ_502_PISOS_XX-XX-XXXX_0278737.pdf,1063115,,2024-01-05 17:30:41,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA INES NAVARRO BAEZ_502_PISOS_XX-XX-XXXX_027873701.pdf,444174,,2024-01-05 17:30:38,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA INMACULADA GODOY QUINTANA_502_PISOS_XX-XX-XXXX_043048601.pdf,467328,,2023-12-30 21:04:45,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA INMACULADA GODOY QUINTANA_502_PISOS_XX-XX-XXXX_043948.pdf,2256472,,2024-05-09 13:19:37,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA MERCEDES CABRERA PEREZ_502_PISOS_XX-XX-XXXX_0241787.pdf,1159909,,2023-12-30 20:55:30,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA MERCEDES CABRERA PEREZ_502_PISOS_XX-XX-XXXX_02417871.pdf,437193,,2024-04-11 13:57:43,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA TERESA AGUILAR NAVARRO_502_PISOS_XX-XX-XXXX_0064995.pdf,2723887,,2024-05-09 13:19:33,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA TERESA AGUILAR NAVARRO_502_PISOS_XX-XX-XXXX_0240801.pdf,1156628,,2023-12-30 20:55:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA TERESA AGUILAR NAVARRO_502_PISOS_XX-XX-XXXX_024080101.pdf,902686,,2024-02-17 21:51:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA VEGA QUINTANA_502_PISOS_XX-XX-XXXX_00308778.pdf,2630069,,2024-01-25 18:06:27,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARIA VICTORIA ALVAREZ BETANCOURTH_502_PISOS_XX-XX-XXXX_024569301.pdf,1783239,,2024-01-25 18:06:12,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MARTHA ISABEL LOPEZ ESPINOSA_502_PISOS_XX-XX-XXXX_0079400.pdf,1740721,,2024-06-13 09:42:08,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MAYELIN FUENTES QUIROGA_502_PISOS_XX-XX-XXXX_0207824.pdf,1057839,,2023-12-30 21:04:44,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MAYELIN FUENTES QUIROGA_502_PISOS_XX-XX-XXXX_020782401.pdf,911621,,2024-01-25 18:04:53,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/PISOS/MELANY ZERPA HERNANDEZ_502_PISOS_XX-XX-XXXX_0110848.pdf,1078081,,2024-06-06 09:44:58,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/AGUSTIN JULIAN DE LEON FERNADEZ_502_RESTAURANTE_XX-XX-XXXX_028015101.pdf,434532,,2024-04-11 13:57:46,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/AGUSTIN JULIAN DE LEON FERNANDEZ_502_RESTAURANTE_XX-XX-XXXX_0201644.pdf,1057238,,2024-08-23 10:04:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/AGUSTIN JULIAN DE LEON FERNANDEZ_502_RESTAURANTE_XX-XX-XXXX_0280151.pdf,1362742,,2023-12-30 20:55:30,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/AITANA SANTANA CACERES_502_RESTAURANTE_XX-XX-XXXX_0093799.pdf,1247243,,2024-01-14 13:27:53,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ALBA LEONOR ORTIZ DEL ROSARIO_502_RESTAURANTE_XX-XX-XXXX_0055607.pdf,1205785,,2024-04-11 13:57:42,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ALBA LEONOR ORTIZ DEL ROSARIO_502_RESTAURANTE_XX-XX-XXXX_01380431.pdf,622903,,2024-10-16 13:47:46,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ALBA LEONOR ORTIZ ROSARIO_502_RESTAURANTE_XX-XX-XXXX_0138043.pdf,1156904,,2024-08-16 11:28:22,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ALEJANDRO GAROE BRITO NUEZ_502_RESTAURANTE_XX-XX-XXXX_0353358.pdf,1099106,,2025-03-06 11:27:49,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ANAIS MECA TRUJILLO_502_RESTAURANTE_XX-XX-XXXX_0339473.pdf,1086296,,2025-02-06 12:12:56,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ANCOR ALEXANDER GUEDES SIERRA_502_RESTAURANTE_XX-XX-XXXX_0360606.pdf,1072240,,2025-03-06 11:52:36,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ARACELI PARRA ESTEBAN_502_RESTAURANTE_XX-XX-XXXX_0201530.pdf,1073047,,2024-08-23 10:01:33,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ARMANDO DAVID QUEVEDO VEGA_502_RESTAURANTE_XX-XX-XXXX_0307316.pdf,1085512,,2025-03-06 10:02:19,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/AYTHAMY SUAREZ CRUZ_502_RESTAURANTE_XX-XX-XXXX_0270582.pdf,1184125,,2023-12-30 20:55:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/CARLOTA TEJERA SUAREZ_502_RESTAURANTE_XX-XX-XXXX_0129791.pdf,1248499,,2023-12-30 20:55:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/CATHAYSA MEDINA VALENCIA_502_RESTAURANTE_XX-XX-XXXX_0064994.pdf,1180337,,2024-04-11 13:57:51,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/CATHAYSA MEDINA VALENCIA_502_RESTAURANTE_XX-XX-XXXX_0280150.pdf,1279431,,2023-12-30 20:55:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/CATHAYSA MEDINA VALENCIA_502_RESTAURANTE_XX-XX-XXXX_028015001.pdf,894506,,2024-02-17 21:51:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/DANIEL MENA BOCK_502_RESTAURANTE_XX-XX-XXXX_0294165.pdf,1158948,,2023-12-30 20:52:57,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/DEINER BRAVO GORRIN_502_RESTAURANTE_XX-XX-XXXX_0328519.pdf,2581222,,2024-02-17 21:51:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/DEINER BRAVO GORRIN_502_RESTAURANTE_XX-XX-XXXX_03285191.pdf,438964,,2024-04-11 13:57:42,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/DESIREE ARIAS BARRIOS_502_RESTAURANTE_XX-XX-XXXX_0201645.pdf,1081753,,2024-08-23 09:52:33,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ELENA GOMEZ HIERRO_502_RESTAURANTE_XX-XX-XXXX_0019300.pdf,1229051,,2024-04-11 13:57:44,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ELENA GOMEZ HIERRO_502_RESTAURANTE_XX-XX-XXXX_0036358.pdf,2182204,,2023-12-30 20:55:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ELENA GOMEZ HIERRO_502_RESTAURANTE_XX-XX-XXXX_0207815.pdf,751118,,2023-12-30 21:04:49,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ELENA GOMEZ HIERRO_502_RESTAURANTE_XX-XX-XXXX_020781501.pdf,449040,,2023-12-30 21:04:52,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ELISABET CABRERA MARTIN_502_RESTAURANTE_XX-XX-XXXX_0055514.pdf,1208939,,2024-04-11 13:57:45,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ELISABET CABRERA MARTIN_502_RESTAURANTE_XX-XX-XXXX_00555141.pdf,349057,,2024-08-16 11:56:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ELISABET CABRERA MARTIN_502_RESTAURANTE_XX-XX-XXXX_0328073.pdf,1167808,,2025-03-06 11:47:05,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ELIZABETH CABRERA MIRANDA_502_RESTAURANTE_XX-XX-XXXX_0256059.pdf,1587189,,2024-12-26 11:00:13,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ELIZABETH CABRERA MIRANDA_502_RESTAURANTE_XX-XX-XXXX_02560591.pdf,361982,,2025-03-06 11:37:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ELIZABETH FUENTES SEPULVEDA_502_RESTAURANTE_XX-XX-XXXX_0311437.pdf,1073073,,2025-03-06 10:14:27,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ERIKA MUÑOZ PRADA_502_RESTAURANTE_XX-XX-XXXX_0052318.pdf,1204947,,2024-04-11 13:57:41,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ERIKA MUÑOZ PRADA_502_RESTAURANTE_XX-XX-XXXX_005231801.pdf,351543,,2024-08-16 11:54:49,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ESTEFANIA LOPEZ CALERO_502_RESTAURANTE_XX-XX-XXXX_0243543.pdf,1635348,,2024-12-26 10:59:55,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ESTEFANIA LOPEZ CALERO_502_RESTAURANTE_XX-XX-XXXX_02435431.pdf,367106,,2025-03-06 11:22:48,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/ESTEFANÍA LOPEZ CALERO_502_RESTAURANTE_XX-XX-XXXX_074967.pdf,1019752,,2024-01-05 17:30:44,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/FATIMA AMAKRAN EL BALI_502_RESTAURANTE_XX-XX-XXXX_0148477.pdf,1153220,,2024-08-22 12:48:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/FRANCISCO NAVARRO GONZALEZ_502_RESTAURANTE_XX-XX-XXXX_0220589.pdf,1044367,,2024-01-05 17:30:44,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/FRANCISCO NAVARRO GONZALEZ_502_RESTAURANTE_XX-XX-XXXX_02205891.pdf,393425,,2024-06-19 09:39:09,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/GABRIEL VEGA SUAREZ_502_RESTAURANTE_XX-XX-XXXX_0207813.pdf,1060794,,2023-12-30 21:04:44,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/GABRIEL VEGA SUAREZ_502_RESTAURANTE_XX-XX-XXXX_020781301.pdf,452236,,2023-12-30 21:04:46,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/GABRIELE DE MUTO_502_RESTAURANTE_XX-XX-XXXX_0219605.pdf,1775795,,2024-10-16 13:42:12,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/HUMBERTO TOLEDO CHAVIANO_502_RESTAURANTE_XX-XX-XXXX_0271379.pdf,1559805,,2024-12-26 10:58:35,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/IDAIRA NAZARET SUAREZ DIAZ_502_RESTAURANTE_XX-XX-XXXX_0223147.pdf,1701531,,2024-10-16 13:41:25,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/IDAIRA NAZARET SUAREZ DIAZ_502_RESTAURANTE_XX-XX-XXXX_02231471.pdf,721724,,2025-02-06 11:07:23,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JAVIER SANCHEZ MACIAS_502_RESTAURANTE_XX-XX-XXXX_0187035.pdf,1153144,,2023-12-30 20:55:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JEFFERSON STANL HERNANDEZ DAVILA_502_RESTAURANTE_XX-XX-XXXX_0055513.pdf,1206142,,2024-04-11 13:57:43,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JEFFERSON STANL HERNANDEZ DAVILA_502_RESTAURANTE_XX-XX-XXXX_00555131.pdf,364604,,2024-08-22 12:33:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JISE ANTONIO DIANEZ MESA_502_RESTAURANTE_XX-XX-XXXX_0201529.pdf,1094503,,2024-08-23 10:08:11,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JOEL AARON HERNANDEZ MEDINA_502_RESTAURANTE_XX-XX-XXXX_0219606.pdf,1758521,,2024-10-16 13:40:45,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JOEL AARON HERNANDEZ MEDINA_502_RESTAURANTE_XX-XX-XXXX_02196061.pdf,350782,,2025-03-06 10:45:21,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JONATHAN MIGUEL CABALLERO MESA_502_RESTAURANTE_XX-XX-XXXX_0064993.pdf,2680250,,2024-05-09 13:19:36,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JOSE IGNACIO TORRADO JURADO_502_RESTAURANTE_XX-XX-XXXX_0134476.pdf,1096412,,2024-08-16 11:31:35,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JOSE IGNACIO TORRADO JURADO_502_RESTAURANTE_XX-XX-XXXX_01344761.pdf,371266,,2025-03-06 10:43:00,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JOSE LUIS OLMEDO FABELO_502_RESTAURANTE_XX-XX-XXXX_0093801.pdf,1252031,,2023-12-30 21:04:45,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JOSE LUIS OLMEDO FABELO_502_RESTAURANTE_XX-XX-XXXX_00938011.pdf,440538,,2023-12-30 20:55:26,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JOSELINE DEL PINO HERRERA HIDALGO_502_RESTAURANTE_XX-XX-XXXX_0093800.pdf,1251329,,2024-01-05 17:30:41,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JOSELINE DEL PINO HERRERA HIDALGO_502_RESTAURANTE_XX-XX-XXXX_00938001.pdf,444659,,2023-12-30 20:52:59,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JOSELINE DEL PINO HERRERA HIDALGO_502_RESTAURANTE_XX-XX-XXXX_0262418.pdf,1186072,,2023-12-30 20:55:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JUAN ANTONIO HUAN MORALES_502_RESTAURANTE_XX-XX-XXXX_0024664.pdf,1229106,,2024-04-11 13:57:48,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/JUAN ANTONIO HUAN MORALES_502_RESTAURANTE_XX-XX-XXXX_00246641.pdf,366642,,2024-08-16 10:44:59,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/KEVIN JOSE GUEDEZ RODRIGUEZ_502_RESTAURANTE_XX-XX-XXXX_01297990.pdf,1124249,,2024-08-16 10:42:15,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/KIARA DEL CARMEN GARCIA REYES_502_RESTAURANTE_XX-XX-XXXX_0250898.pdf,875616,,2024-06-19 09:55:42,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/KIARA DEL CARMEN GARCIA REYES_502_RESTAURANTE_XX-XX-XXXX_025089801.pdf,1614002,,2023-12-30 20:55:28,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/LAURA YLENIA HERNANDEZ GONZALEZ_502_RESTAURANTE_XX-XX-XXXX_0049752.pdf,1038167,,2023-12-30 21:04:46,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/LAURA YLENIA HERNANDEZ GONZALEZ_502_RESTAURANTE_XX-XX-XXXX_00497521.pdf,380251,,2024-06-19 11:04:17,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/LILIANA CARBOVEANU_502_RESTAURANTE_XX-XX-XXXX_0074904.pdf,1014193,,2023-12-30 20:55:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/MARIA VEGA QUINTANA_502_RESTAURANTE_XX-XX-XXXX_00308781.pdf,449095,,2023-12-30 20:55:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/MARILUZ SABINA MONZON_502_RESTAURANTE_XX-XX-XXXX_0055515.pdf,1197222,,2024-04-11 13:57:45,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/RESTAURANTE/MARILUZ SABINA MONZON_502_RESTAURANTE_XX-XX-XXXX_005551501.pdf,383059,,2024-08-16 10:51:24,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/SIN DEPARTAMENTO/SOFIA BOLAÑOS DIAZ RESTAURANTE AYTE CAMARERO_502_SIN DEPARTAMENTO_20-10-2025_19-12-2025_0302081.pdf,1125059,,2025-12-04 12:25:48,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,502/SPA/CHRISTIAN MONZON GIL_502_SPA_XX-XX-XXXX_0348269.pdf,1063160,,2024-01-05 17:30:46,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,510/PISOS/ACORAIMA HERRERA LANZAS_510_PISOS_CAMARERA DE PISOS_XX-XX-XXXX_0038422.pdf,1231121,,2024-04-11 13:57:51,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,510/PISOS/ACORAIMA HERRERA LANZAS_510_PISOS_CAMARERA DE PISOS_XX-XX-XXXX_0163118.pdf,1162792,,2024-08-22 09:42:35,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,510/PISOS/ACORAIMA HERRERA LANZAS_510_PISOS_CAMARERA DE PISOS_XX-XX-XXXX_0201531.pdf,1131379,,2024-08-23 09:58:55,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,510/PISOS/MAYELIN FUENTES QUIROGA_510_PISOS_XX-XX-XXXX_0207816.pdf,1151436,,2023-12-30 21:04:44,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,CAMBIO DE CONTRATO/ACORAIMA HERRERA LANZAS_0000_00 00 0000_31-07-2024_00-00-0000.pdf,121786,,2024-10-23 09:56:29,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,CAMBIO DE CONTRATO/DIRECCION/CINDY PAOLA ALBIS LEON_CAMBIO DE CONTRATO_DIRECCION_17-08-2024.pdf,190610,,2024-10-23 09:59:49,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,CAMBIO DE CONTRATO/PISOS/ACORAIMA HERRERA LANZAS_CAMBIO DE CONTRATO_PISOS_01-08-2024_01-09-2024.pdf,141109,,2024-10-23 09:56:33,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,CAMBIO DE CONTRATO/PISOS/ACORAIMA HERRERA LANZAS_CAMBIO DE CONTRATO_PISOS_CAMARERA DE PISOS_17-08-2024.pdf,183717,,2024-10-23 09:59:44,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,CAMBIO DE CONTRATO/PISOS/BRUNILDA OLIVA CRUZ_CAMBIO DE CONTRATO_PISOS_08-07-2024_31-07-2024.pdf,134790,,2024-10-23 09:56:35,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,CAMBIO DE CONTRATO/PISOS/CINDY PAOLA ALBIS LEON_CAMBIO DE CONTRATO_PISOS_27-07-2024_01-09-2024.pdf,120500,,2024-10-23 09:56:34,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,SUSPENCION-LLAMAMIENTOS/PISOS/BRUNILDA OLIVA CRUZ_SUSPENCION-LLAMAMIENTOS_PISOS_24-03-2025_08-04-2025.pdf,193563,,2025-12-19 11:57:03,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,SUSPENCION-LLAMAMIENTOS/PISOS/MARLENE MARTINEZ SOLAYA_SUSPENCION-LLAMAMIENTOS_PISOS_01-07-2025_01-08-2025.pdf,183353,,2025-10-31 10:20:04,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,SUSPENCION-LLAMAMIENTOS/RESTAURANTE/KEVIN PEREZ RODRIGUEZ_SUSPENCION-LLAMAMIENTOS_RESTAURANTE_16-06-2025_01-07-2025.pdf,173653,,2025-06-20 11:05:42,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,SUSPENCION-LLAMAMIENTOS/RESTAURANTE/OSQUELL ALONSO LOPEZ_SUSPENCION-LLAMAMIENTOS_RESTAURANTE_16 12 2025_16-12-2025_1-12-2025.pdf,187013,,2025-12-19 12:12:47,,No existe en iCloud con la misma ruta
+copy_missing_to_icloud,SUSPENCION-LLAMAMIENTOS/RESTAURANTE/RAFAEL ANTONIO GONZALEZ NOBLIA_SUSPENCION-LLAMAMIENTOS_RESTAURANTE_01-09-2025_16-09-2025.pdf,207470,,2025-10-31 10:48:38,,No existe en iCloud con la misma ruta
