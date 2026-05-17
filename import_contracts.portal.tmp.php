@@ -188,7 +188,14 @@ function should_skip_import_rel(string $rel): bool
     }
 
     $first = strtoupper((string)$parts[0]);
-    return in_array($first, ["ENTRADA", "PROCESADOS"], true);
+    return in_array($first, [
+        "ENTRADA",
+        "PROCESADOS",
+        "SUSPENCION-LLAMAMIENTOS",
+        "SUSPENSION-LLAMAMIENTOS",
+        "CAMBIO DE CONTRATO",
+        "SIN TIPO",
+    ], true);
 }
 
 function department_from_rel(string $rel, ?string $contractType = null): string
