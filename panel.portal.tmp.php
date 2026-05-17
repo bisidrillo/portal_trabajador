@@ -361,6 +361,9 @@ $isAdmin = !empty($_SESSION["is_admin"]);
 $pdo = null;
 $showProrrogas = ($_GET["prorrogas"] ?? "0") === "1";
 $showConversiones = ($_GET["conversiones"] ?? "0") === "1";
+$validRuleWindows = ["", "3", "6", "9", "12"];
+$prorrogaWindow = in_array((string)($_GET["prorroga_window"] ?? ""), $validRuleWindows, true) ? (string)($_GET["prorroga_window"] ?? "") : "";
+$conversionWindow = in_array((string)($_GET["conversion_window"] ?? ""), $validRuleWindows, true) ? (string)($_GET["conversion_window"] ?? "") : "";
 $has_filter = $type !== "" || $section !== "" || $date_from !== "" || $date_to !== "" || $sustituto !== "" || $sustituido !== "" || $showProrrogas || $showConversiones;
 $available_roots = [];
 
@@ -445,23 +448,31 @@ if (($showProrrogas || $showConversiones) && $pdo instanceof PDO) {
     try {
         if (table_exists($pdo, "contracts")) {
             if ($showProrrogas && column_exists($pdo, "contracts", "es_prorroga")) {
-                $stmt = $pdo->query(
-                    "SELECT id, worker_name, contract_type, start_date, end_date, inss_code, codigo_inss_base, numero_prorroga, source_base, pdf_relpath, source_filename
-                     FROM contracts
-                     WHERE es_prorroga = 1
-                     ORDER BY start_date DESC, worker_name ASC
-                     LIMIT " . (int)$limit
-                );
+                $sql = "SELECT id, worker_name, contract_type, start_date, end_date, inss_code, codigo_inss_base, numero_prorroga, source_base, pdf_relpath, source_filename
+                        FROM contracts
+                        WHERE es_prorroga = 1";
+                $params = [];
+                if ($prorrogaWindow !== "") {
+                    $sql .= " AND start_date >= DATE_SUB(CURDATE(), INTERVAL ? MONTH)";
+                    $params[] = (int)$prorrogaWindow;
+                }
+                $sql .= " ORDER BY start_date DESC, worker_name ASC LIMIT " . (int)$limit;
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute($params);
                 $extensionResults = $stmt->fetchAll();
             }
             if ($showConversiones && column_exists($pdo, "contracts", "es_conversion")) {
-                $stmt = $pdo->query(
-                    "SELECT id, worker_name, contract_type, start_date, end_date, modalidad, source_base, pdf_relpath, source_filename
-                     FROM contracts
-                     WHERE es_conversion = 1
-                     ORDER BY start_date DESC, worker_name ASC
-                     LIMIT " . (int)$limit
-                );
+                $sql = "SELECT id, worker_name, contract_type, start_date, end_date, modalidad, source_base, pdf_relpath, source_filename
+                        FROM contracts
+                        WHERE es_conversion = 1";
+                $params = [];
+                if ($conversionWindow !== "") {
+                    $sql .= " AND start_date >= DATE_SUB(CURDATE(), INTERVAL ? MONTH)";
+                    $params[] = (int)$conversionWindow;
+                }
+                $sql .= " ORDER BY start_date DESC, worker_name ASC LIMIT " . (int)$limit;
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute($params);
                 $conversionResults = $stmt->fetchAll();
             }
         }
@@ -542,7 +553,21 @@ render_layout_start("Panel - Portal del trabajador", [
 	        <input name="sustituto" value="<?= htmlspecialchars($sustituto) ?>" placeholder="Nombre sustituto">
 	        <input name="sustituido" value="<?= htmlspecialchars($sustituido) ?>" placeholder="Nombre sustituido">
 	        <label class="panel-badge"><input type="checkbox" name="prorrogas" value="1" <?= $showProrrogas ? "checked" : "" ?>> Prorrogas</label>
+	        <select name="prorroga_window">
+	          <option value="" <?= $prorrogaWindow === "" ? "selected" : "" ?>>Prorrogas: todas</option>
+	          <option value="3" <?= $prorrogaWindow === "3" ? "selected" : "" ?>>Prorrogas: 3 meses</option>
+	          <option value="6" <?= $prorrogaWindow === "6" ? "selected" : "" ?>>Prorrogas: 6 meses</option>
+	          <option value="9" <?= $prorrogaWindow === "9" ? "selected" : "" ?>>Prorrogas: 9 meses</option>
+	          <option value="12" <?= $prorrogaWindow === "12" ? "selected" : "" ?>>Prorrogas: 12 meses</option>
+	        </select>
 	        <label class="panel-badge"><input type="checkbox" name="conversiones" value="1" <?= $showConversiones ? "checked" : "" ?>> Conversiones</label>
+	        <select name="conversion_window">
+	          <option value="" <?= $conversionWindow === "" ? "selected" : "" ?>>Conversiones: todas</option>
+	          <option value="3" <?= $conversionWindow === "3" ? "selected" : "" ?>>Conversiones: 3 meses</option>
+	          <option value="6" <?= $conversionWindow === "6" ? "selected" : "" ?>>Conversiones: 6 meses</option>
+	          <option value="9" <?= $conversionWindow === "9" ? "selected" : "" ?>>Conversiones: 9 meses</option>
+	          <option value="12" <?= $conversionWindow === "12" ? "selected" : "" ?>>Conversiones: 12 meses</option>
+	        </select>
 	        <button class="btn" type="submit">Buscar</button>
       </form>
     </div>
@@ -635,6 +660,7 @@ render_layout_start("Panel - Portal del trabajador", [
 	          <span class="section-kicker">Prorrogas registradas</span>
 	          <div class="panel-badges" style="margin-top:10px;">
 	            <span class="panel-badge"><?= count($extensionResults) ?> resultado<?= count($extensionResults) === 1 ? "" : "s" ?></span>
+	            <?php if ($prorrogaWindow !== ""): ?><span class="panel-badge">Ultimos <?= htmlspecialchars($prorrogaWindow) ?> meses</span><?php endif; ?>
 	          </div>
 	        </div>
 	      </div>
@@ -691,6 +717,7 @@ render_layout_start("Panel - Portal del trabajador", [
 	          <span class="section-kicker">Conversiones a indefinido</span>
 	          <div class="panel-badges" style="margin-top:10px;">
 	            <span class="panel-badge"><?= count($conversionResults) ?> resultado<?= count($conversionResults) === 1 ? "" : "s" ?></span>
+	            <?php if ($conversionWindow !== ""): ?><span class="panel-badge">Ultimos <?= htmlspecialchars($conversionWindow) ?> meses</span><?php endif; ?>
 	          </div>
 	        </div>
 	      </div>
