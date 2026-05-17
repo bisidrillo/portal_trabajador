@@ -522,6 +522,15 @@ function upsert_contract(PDO $pdo, int $workerId, string $sourceBase, string $re
         $existingId = $stmt->fetchColumn();
     }
 
+    if ($existingId && $contractCode !== "") {
+        $stmt = $pdo->prepare("SELECT id FROM contracts WHERE contract_code = ? LIMIT 1");
+        $stmt->execute([$contractCode]);
+        $codeExistingId = $stmt->fetchColumn();
+        if ($codeExistingId && (int)$codeExistingId !== (int)$existingId) {
+            $existingId = $codeExistingId;
+        }
+    }
+
     if ($existingId) {
         $extraSet = "";
         $extraParams = [];
