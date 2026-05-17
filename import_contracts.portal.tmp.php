@@ -7,6 +7,7 @@ if (function_exists("opcache_reset")) {
 
 require_once __DIR__ . "/includes/layout.php";
 require_once __DIR__ . "/includes/contract_utils.php";
+require_once __DIR__ . "/includes/contract_filename_parser.php";
 
 function clean_token(string $value): string
 {
@@ -252,168 +253,15 @@ function normalize_person_name(array $nameTokens): array
 
 function parse_contract_filename(string $filename, string $rel = ""): ?array
 {
-    $filename = normalize_filename_text($filename);
-    $base = preg_replace('/\.pdf$/i', '', $filename);
-    $parts = array_values(array_filter(array_map("trim", preg_split('/_+/u', (string)$base) ?: []), static function (string $v): bool {
-        return $v !== "";
-    }));
-    $parts = normalize_filename_parts($parts);
-    if (count($parts) <= 1) {
-        $parts = array_values(array_filter(array_map("trim", preg_split('/\s+/u', (string)$base) ?: []), static function (string $v): bool {
-            return $v !== "";
-        }));
-        $parts = normalize_filename_parts($parts);
-    }
-    if (!$parts) {
+    $parsed = parseContratoFilename($filename, $rel);
+    if ($parsed === null) {
         return null;
     }
-
-    $type = contract_detect_type($rel, $filename, $parts);
-    if ($type === null) {
-        $type = normalize_contract_type_hint($rel) ?? normalize_contract_type_hint($filename);
-    }
-    if ($type === null) {
-        return null;
-    }
-
-    $typeIdx = find_contract_type_index($parts, $type);
-
-    if ($typeIdx !== null) {
-        $beforeType = array_slice($parts, 0, $typeIdx);
-        $afterType = array_slice($parts, $typeIdx + 1);
-    } else {
-        $firstDateIdx = null;
-        foreach ($parts as $i => $token) {
-            if (parse_filename_date_iso((string)$token) !== null) {
-                $firstDateIdx = $i;
-                break;
-            }
-        }
-
-        if ($firstDateIdx !== null) {
-            $beforeType = array_slice($parts, 0, $firstDateIdx);
-            while ($beforeType && normalize_contract_type_hint((string)end($beforeType)) === $type) {
-                array_pop($beforeType);
-            }
-
-            $afterType = array_slice($parts, count($beforeType));
-            while ($afterType && normalize_contract_type_hint((string)$afterType[0]) === $type) {
-                array_shift($afterType);
-            }
-        } else {
-            $beforeType = [];
-            $afterType = $parts;
-        }
-    }
-
-    $dateIdxs = [];
-    foreach ($afterType as $i => $token) {
-        $d = parse_filename_date_iso((string)$token);
-        if ($d) {
-            $dateIdxs[] = $i;
-        }
-    }
-    $startIdx = $dateIdxs[0] ?? null;
-    $startDate = $startIdx !== null ? parse_filename_date_iso((string)$afterType[$startIdx]) : null;
-    if ($startDate === null) {
-        return null;
-    }
-
-    $endIdx = $dateIdxs[1] ?? null;
-    $endDate = $endIdx !== null ? parse_filename_date_iso((string)$afterType[$endIdx]) : null;
-    if (is_substitution_contract_type($type) && count($dateIdxs) < 2) {
-        $endIdx = null;
-        $endDate = null;
-    }
-
-    $department = "";
-    $category = "";
-    $uniqueCode = "";
-
-    // Soporta dos variantes:
-    // A) NOMBRE..._TIPO_FECHAINICIO_FECHAFIN_DEPARTAMENTO_CATEGORIA_CODIGO
-    // B) NOMBRE..._TIPO_DEPARTAMENTO_CATEGORIA..._FECHAINICIO_FECHAFIN_CODIGO
-    if ($startIdx === 0) {
-        $rest = array_slice($afterType, ($endIdx !== null ? $endIdx + 1 : 1));
-        if ($rest) {
-            $department = clean_token((string)$rest[0]);
-            $catTokens = array_slice($rest, 1);
-            if ($catTokens) {
-                $last = (string)end($catTokens);
-                if (looks_like_unique_code($last)) {
-                    $uniqueCode = clean_token($last);
-                    array_pop($catTokens);
-                }
-                $category = clean_token((string)implode(" ", array_map("strval", $catTokens)));
-            }
-        }
-    } else {
-        if (isset($afterType[0])) {
-            $department = clean_token((string)$afterType[0]);
-        }
-        $roleTokens = [];
-        if ($startIdx > 1) {
-            $roleTokens = array_slice($afterType, 1, $startIdx - 1);
-        } elseif ($startIdx === 1 && isset($afterType[1])) {
-            $roleTokens = [$afterType[1]];
-        }
-        $category = clean_token((string)implode(" ", array_map("strval", $roleTokens)));
-        $tail = array_slice($afterType, ($endIdx !== null ? $endIdx + 1 : $startIdx + 1));
-        if ($tail) {
-            $uniqueCode = clean_token((string)implode("_", array_map("strval", $tail)));
-        }
-    }
-
-    if ($beforeType) {
-        $nameTokens = array_values(array_filter(array_map("strval", $beforeType), static function (string $v): bool {
-            return trim($v) !== "";
-        }));
-    } else {
-        $baseName = trim((string)($parts[0] ?? ""));
-        if ($baseName === "") {
-            return null;
-        }
-        $nameTokens = [clean_token($baseName)];
-    }
-
-    $person = normalize_person_name($nameTokens);
-    $fullName = (string)$person["full_name"];
-    if ($fullName === "") {
-        return null;
-    }
-
-    $today = (new DateTimeImmutable("today"))->format("Y-m-d");
-    if ($startDate > $today) {
-        $status = "inactive";
-    } elseif ($endDate !== null && $endDate < $today) {
-        $status = "ended";
-    } else {
-        $status = "active";
-    }
-
-    $inssCode = "";
-    if ((bool)preg_match('/^\d{6,12}$/', preg_replace('/\D+/', '', $uniqueCode) ?? "")) {
-        $inssCode = preg_replace('/\D+/', '', $uniqueCode) ?? "";
-    }
-
-    $departmentFromRel = department_from_rel($rel, $type);
+    $departmentFromRel = department_from_rel($rel, (string)$parsed["contract_type"]);
     if ($departmentFromRel !== "") {
-        $department = $departmentFromRel;
+        $parsed["department"] = $departmentFromRel;
     }
-
-    return [
-        "first_name" => (string)$person["first_name"],
-        "last_name" => (string)$person["last_name"],
-        "full_name" => $fullName,
-        "inss_code" => $inssCode,
-        "contract_type" => (string)$type,
-        "start_date" => $startDate,
-        "end_date" => $endDate,
-        "department" => $department,
-        "category" => $category,
-        "status" => $status,
-        "unique_code" => $uniqueCode,
-    ];
+    return $parsed;
 }
 
 function parse_contract_filename_legacy(string $filename, string $rel = ""): ?array
@@ -504,6 +352,13 @@ function table_exists(PDO $pdo, string $table): bool
 {
     $stmt = $pdo->prepare("SELECT 1 FROM information_schema.tables WHERE table_schema = DATABASE() AND table_name = ? LIMIT 1");
     $stmt->execute([$table]);
+    return (bool)$stmt->fetchColumn();
+}
+
+function column_exists(PDO $pdo, string $table, string $column): bool
+{
+    $stmt = $pdo->prepare("SELECT 1 FROM information_schema.columns WHERE table_schema = DATABASE() AND table_name = ? AND column_name = ? LIMIT 1");
+    $stmt->execute([$table, $column]);
     return (bool)$stmt->fetchColumn();
 }
 
@@ -620,6 +475,22 @@ function upsert_worker(PDO $pdo, array $m): int
 function upsert_contract(PDO $pdo, int $workerId, string $sourceBase, string $rel, string $filename, array $m): bool
 {
     $contractCode = source_contract_code($sourceBase, $rel, $m["contract_type"], (string)($m["unique_code"] ?? ""));
+    $ruleValues = [
+        "es_sustitucion" => !empty($m["es_sustitucion"]) ? 1 : 0,
+        "persona_sustituida" => $m["persona_sustituida"] ?? null,
+        "es_prorroga" => !empty($m["es_prorroga"]) ? 1 : 0,
+        "numero_prorroga" => $m["numero_prorroga"] ?? null,
+        "codigo_inss_base" => $m["codigo_inss_base"] ?? null,
+        "es_conversion" => !empty($m["es_conversion"]) ? 1 : 0,
+        "es_indefinido" => !empty($m["es_indefinido"]) ? 1 : 0,
+        "modalidad" => $m["modalidad"] ?? null,
+    ];
+    $availableRuleValues = [];
+    foreach ($ruleValues as $column => $value) {
+        if (column_exists($pdo, "contracts", $column)) {
+            $availableRuleValues[$column] = $value;
+        }
+    }
 
     $stmt = $pdo->prepare("SELECT id FROM contracts WHERE source_base = ? AND pdf_relpath = ? LIMIT 1");
     $stmt->execute([$sourceBase, $rel]);
@@ -638,13 +509,19 @@ function upsert_contract(PDO $pdo, int $workerId, string $sourceBase, string $re
     }
 
     if ($existingId) {
+        $extraSet = "";
+        $extraParams = [];
+        foreach ($availableRuleValues as $column => $value) {
+            $extraSet .= ", {$column} = ?";
+            $extraParams[] = $value;
+        }
         $stmt = $pdo->prepare(
             "UPDATE contracts
              SET worker_id = ?, contract_code = ?, worker_name = ?, contract_type = ?, start_date = ?, end_date = ?,
-                 department = ?, category = ?, inss_code = ?, status = ?, pdf_relpath = ?, source_filename = ?, updated_at = CURRENT_TIMESTAMP
+                 department = ?, category = ?, inss_code = ?, status = ?, pdf_relpath = ?, source_filename = ?{$extraSet}, updated_at = CURRENT_TIMESTAMP
              WHERE id = ?"
         );
-        $stmt->execute([
+        $params = [
             $workerId,
             $contractCode,
             $m["full_name"],
@@ -657,17 +534,23 @@ function upsert_contract(PDO $pdo, int $workerId, string $sourceBase, string $re
             $m["status"],
             $rel,
             $filename,
+        ];
+        $params = array_merge($params, $extraParams, [
             (int)$existingId,
         ]);
+        $stmt->execute($params);
         return false;
     }
 
+    $extraColumns = array_keys($availableRuleValues);
+    $extraSqlColumns = $extraColumns ? ", " . implode(", ", $extraColumns) : "";
+    $extraPlaceholders = $extraColumns ? ", " . implode(", ", array_fill(0, count($extraColumns), "?")) : "";
     $stmt = $pdo->prepare(
         "INSERT INTO contracts
-         (worker_id, contract_code, worker_name, contract_type, start_date, end_date, department, category, inss_code, status, source_base, pdf_relpath, source_filename)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+         (worker_id, contract_code, worker_name, contract_type, start_date, end_date, department, category, inss_code, status, source_base, pdf_relpath, source_filename{$extraSqlColumns})
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?{$extraPlaceholders})"
     );
-    $stmt->execute([
+    $params = [
         $workerId,
         $contractCode,
         $m["full_name"],
@@ -681,7 +564,9 @@ function upsert_contract(PDO $pdo, int $workerId, string $sourceBase, string $re
         $sourceBase,
         $rel,
         $filename,
-    ]);
+    ];
+    $params = array_merge($params, array_values($availableRuleValues));
+    $stmt->execute($params);
     return true;
 }
 

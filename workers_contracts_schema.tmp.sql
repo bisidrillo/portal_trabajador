@@ -35,6 +35,14 @@ CREATE TABLE IF NOT EXISTS contracts (
   category VARCHAR(120) DEFAULT NULL,
   inss_code VARCHAR(32) DEFAULT NULL,
   status ENUM('active', 'ended', 'inactive') NOT NULL DEFAULT 'active',
+  es_sustitucion TINYINT(1) NOT NULL DEFAULT 0,
+  persona_sustituida VARCHAR(255) DEFAULT NULL,
+  es_prorroga TINYINT(1) NOT NULL DEFAULT 0,
+  numero_prorroga INT UNSIGNED DEFAULT NULL,
+  codigo_inss_base VARCHAR(32) DEFAULT NULL,
+  es_conversion TINYINT(1) NOT NULL DEFAULT 0,
+  es_indefinido TINYINT(1) NOT NULL DEFAULT 0,
+  modalidad VARCHAR(50) DEFAULT NULL,
 
   -- Referencias al archivo real
   source_base VARCHAR(50) DEFAULT NULL,
@@ -51,6 +59,10 @@ CREATE TABLE IF NOT EXISTS contracts (
   KEY idx_contracts_end_date (end_date),
   KEY idx_contracts_dept_cat (department, category),
   KEY idx_contracts_inss (inss_code),
+  KEY idx_contracts_sustitucion (es_sustitucion),
+  KEY idx_contracts_prorroga (es_prorroga),
+  KEY idx_contracts_conversion (es_conversion),
+  KEY idx_contracts_codigo_base (codigo_inss_base),
   CONSTRAINT fk_contracts_worker FOREIGN KEY (worker_id) REFERENCES workers(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 

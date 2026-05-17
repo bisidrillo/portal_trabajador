@@ -78,6 +78,10 @@ try {
             }
         }
         if (!$warnings) {
+            $hasEsSustitucion = column_exists($pdo, "contracts", "es_sustitucion");
+            $hasEsProrroga = column_exists($pdo, "contracts", "es_prorroga");
+            $hasEsConversion = column_exists($pdo, "contracts", "es_conversion");
+            $hasModalidad = column_exists($pdo, "contracts", "modalidad");
             $stmt = $pdo->query(
                 "SELECT DISTINCT TRIM(department) AS dep
                  FROM contracts
@@ -91,7 +95,11 @@ try {
             }));
 
             $sql = "
-                SELECT id, worker_name, contract_type, department, start_date, end_date, contract_code
+                SELECT id, worker_name, contract_type, department, start_date, end_date, contract_code,
+                       " . ($hasEsSustitucion ? "es_sustitucion" : "0") . " AS es_sustitucion,
+                       " . ($hasEsProrroga ? "es_prorroga" : "0") . " AS es_prorroga,
+                       " . ($hasEsConversion ? "es_conversion" : "0") . " AS es_conversion,
+                       " . ($hasModalidad ? "modalidad" : "NULL") . " AS modalidad
                 FROM contracts
                 WHERE start_date >= DATE_SUB(CURDATE(), INTERVAL ? MONTH)
                   AND start_date <= CURDATE()
@@ -291,7 +299,12 @@ render_layout_start("Analítica de altas - Portal del trabajador", [
                     <button class="btn btn-ghost" type="submit">Guardar</button>
                   </form>
                 </td>
-                <td class="col-type"><?= htmlspecialchars((string)($r["contract_type"] ?? "")) ?></td>
+                <td class="col-type">
+                  <?= htmlspecialchars((string)($r["contract_type"] ?? "")) ?>
+                  <?php if (!empty($r["es_sustitucion"])): ?><div class="muted" style="font-size:11px;">Sust.</div><?php endif; ?>
+                  <?php if (!empty($r["es_prorroga"])): ?><div class="muted" style="font-size:11px;">Prorroga</div><?php endif; ?>
+                  <?php if (!empty($r["es_conversion"])): ?><div class="muted" style="font-size:11px;"><?= htmlspecialchars((string)($r["modalidad"] ?: "Indef.")) ?></div><?php endif; ?>
+                </td>
                 <td class="col-dept">
                   <?php if ($currentDepartment !== ""): ?>
                     <div class="dept-inline dept-display">

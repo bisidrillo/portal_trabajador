@@ -8,6 +8,7 @@ if (empty($_SESSION["user"])) {
 $DOCUMENT_ROOTS = require __DIR__ . "/config.php";
 require_once __DIR__ . "/includes/layout.php";
 require_once __DIR__ . "/includes/contract_utils.php";
+require_once __DIR__ . "/includes/contract_filename_parser.php";
 
 function normalize_path(string $path): string {
     $path = str_replace("\\", "/", $path);
@@ -85,11 +86,6 @@ function extract_person_name(string $name): string {
 }
 
 function parse_contract_metadata(string $name): array {
-    $base = trim((string)preg_replace('/\.pdf$/i', '', $name));
-    $tokens = array_values(array_filter(array_map("trim", explode("_", $base)), static function (string $t): bool {
-        return $t !== "";
-    }));
-
     $meta = [
         "person" => extract_person_name($name),
         "type" => null,
@@ -101,79 +97,22 @@ function parse_contract_metadata(string $name): array {
         "sustituto" => null,
         "sustituido" => null,
     ];
-
-    if (!$tokens) {
+    $parsed = parseContratoFilename($name);
+    if ($parsed === null) {
         return $meta;
     }
 
-    $type_idx = null;
-    foreach ($tokens as $idx => $token) {
-        if (preg_match('/^\d{3,4}$/', $token)) {
-            $type_idx = $idx;
-            break;
-        }
+    $meta["person"] = (string)$parsed["full_name"];
+    $meta["type"] = (string)$parsed["contract_type"];
+    $meta["department"] = (string)$parsed["department"];
+    $meta["role"] = (string)$parsed["category"];
+    $meta["id"] = (string)$parsed["unique_code"];
+    $meta["start"] = parse_date_str((string)$parsed["start_date"]);
+    $meta["end"] = !empty($parsed["end_date"]) ? parse_date_str((string)$parsed["end_date"]) : null;
+    if (!empty($parsed["es_sustitucion"])) {
+        $meta["sustituto"] = (string)$parsed["full_name"];
+        $meta["sustituido"] = (string)($parsed["persona_sustituida"] ?? "");
     }
-    if ($type_idx === null) {
-        return $meta;
-    }
-
-    $meta["type"] = $tokens[$type_idx];
-    $person_tokens = array_slice($tokens, 0, $type_idx);
-    if ($person_tokens) {
-        $meta["person"] = trim(implode(" ", $person_tokens));
-    }
-
-    $tail = array_slice($tokens, $type_idx + 1);
-    if (!$tail) {
-        return $meta;
-    }
-
-    $date_idx = null;
-    foreach ($tail as $idx => $token) {
-        if (parse_date_str($token)) {
-            $date_idx = $idx;
-            break;
-        }
-    }
-    if ($date_idx === null) {
-        return $meta;
-    }
-
-    if (isset($tail[0])) {
-        $meta["department"] = $tail[0];
-    }
-    if ($date_idx > 1) {
-        $meta["role"] = trim(implode(" ", array_slice($tail, 1, $date_idx - 1)));
-    } elseif (isset($tail[1]) && $date_idx === 1) {
-        $meta["role"] = $tail[1];
-    }
-
-    $start_dt = parse_date_str($tail[$date_idx]);
-    if ($start_dt) {
-        $meta["start"] = $start_dt;
-    }
-
-    $after_start = array_slice($tail, $date_idx + 1);
-    if (!$after_start) {
-        return $meta;
-    }
-
-    if ($meta["type"] === "410" || $meta["type"] === "510") {
-        $meta["sustituto"] = $meta["person"];
-        $meta["sustituido"] = trim(implode(" ", $after_start));
-        return $meta;
-    }
-
-    $end_dt = parse_date_str($after_start[0] ?? "");
-    if ($end_dt) {
-        $meta["end"] = $end_dt;
-        if (count($after_start) > 1) {
-            $meta["id"] = trim(implode("_", array_slice($after_start, 1)));
-        }
-    } else {
-        $meta["id"] = trim(implode("_", $after_start));
-    }
-
     return $meta;
 }
 

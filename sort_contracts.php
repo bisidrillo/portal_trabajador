@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+require_once __DIR__ . "/includes/contract_filename_parser.php";
+
 const UNKNOWN_FOLDER = '_NO_CLASIFICADO';
 const TARGET_ROOT = '/Volumes/CONTRATOS/CONTRATOS';
 
@@ -83,24 +85,20 @@ function processPdf(string $pdfPath, array $contractTypeMap): void
     $filename = basename($pdfPath);
     $extension = pathinfo($filename, PATHINFO_EXTENSION);
     $basename = pathinfo($filename, PATHINFO_FILENAME);
-
-    $parts = explode('_', $basename);
-
-    if (count($parts) < 7) {
-        moveToUnknown($pdfPath, 'Nombre sin suficientes segmentos');
+    $parsed = parseContratoFilename($filename);
+    if ($parsed === null) {
+        moveToUnknown($pdfPath, 'No se pudo interpretar el nombre con el parser central');
         return;
     }
 
-    [$employeeName, $contractType, $department] = [$parts[0], $parts[1], $parts[2]];
-
-    if ($employeeName === '' || $contractType === '' || $department === '') {
-        moveToUnknown($pdfPath, 'Faltan nombre, tipo o departamento');
-        return;
-    }
-
-    $normalizedContractType = normalizeContractType($contractType, $contractTypeMap);
+    $normalizedContractType = normalizeContractType((string)$parsed["contract_type"], $contractTypeMap);
     if ($normalizedContractType === null) {
-        moveToUnknown($pdfPath, "Tipo de contrato no reconocido: {$contractType}");
+        moveToUnknown($pdfPath, "Tipo de contrato no reconocido: " . (string)$parsed["contract_type"]);
+        return;
+    }
+    $department = (string)$parsed["department"];
+    if ($department === '') {
+        moveToUnknown($pdfPath, 'Falta departamento');
         return;
     }
 

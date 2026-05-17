@@ -190,6 +190,11 @@ try {
         $hasSourceBase = column_exists($pdo, "contracts", "source_base");
         $hasPdfRelPath = column_exists($pdo, "contracts", "pdf_relpath");
         $hasInssCode = column_exists($pdo, "contracts", "inss_code");
+        $hasEsSustitucion = column_exists($pdo, "contracts", "es_sustitucion");
+        $hasPersonaSustituida = column_exists($pdo, "contracts", "persona_sustituida");
+        $hasEsProrroga = column_exists($pdo, "contracts", "es_prorroga");
+        $hasEsConversion = column_exists($pdo, "contracts", "es_conversion");
+        $hasModalidad = column_exists($pdo, "contracts", "modalidad");
 
         $stmt = $pdo->prepare("SELECT id, first_name, last_name, full_name, inss_code, sensitive_notes, created_at FROM workers WHERE id = ? LIMIT 1");
         $stmt->execute([$id]);
@@ -204,6 +209,11 @@ try {
                         " . ($hasSourceFilename ? "source_filename" : "NULL") . " AS source_filename,
                         " . ($hasSourceBase ? "source_base" : "NULL") . " AS source_base,
                         " . ($hasPdfRelPath ? "pdf_relpath" : "NULL") . " AS pdf_relpath,
+                        " . ($hasEsSustitucion ? "es_sustitucion" : "0") . " AS es_sustitucion,
+                        " . ($hasPersonaSustituida ? "persona_sustituida" : "NULL") . " AS persona_sustituida,
+                        " . ($hasEsProrroga ? "es_prorroga" : "0") . " AS es_prorroga,
+                        " . ($hasEsConversion ? "es_conversion" : "0") . " AS es_conversion,
+                        " . ($hasModalidad ? "modalidad" : "NULL") . " AS modalidad,
                         worker_id,
                         worker_name
                  FROM contracts";
@@ -376,7 +386,12 @@ render_layout_start("Ficha trabajador - Portal del trabajador", [
                       $statusClass = in_array($statusRaw, ["active", "inactive", "ended"], true) ? $statusRaw : "ended";
                     ?>
                     <tr>
-                      <td class="col-type"><?= htmlspecialchars((string)($c["contract_type"] ?? "")) ?></td>
+                      <td class="col-type">
+                        <?= htmlspecialchars((string)($c["contract_type"] ?? "")) ?>
+                        <?php if (!empty($c["es_sustitucion"])): ?><div class="muted" style="font-size:11px;">Sust.</div><?php endif; ?>
+                        <?php if (!empty($c["es_prorroga"])): ?><div class="muted" style="font-size:11px;">Prorroga</div><?php endif; ?>
+                        <?php if (!empty($c["es_conversion"])): ?><div class="muted" style="font-size:11px;"><?= htmlspecialchars((string)($c["modalidad"] ?: "Indef.")) ?></div><?php endif; ?>
+                      </td>
                       <td class="col-date"><?= htmlspecialchars(format_date_es((string)($c["start_date"] ?? ""))) ?></td>
                       <td class="col-date"><?= htmlspecialchars(format_date_es((string)($c["end_date"] ?? ""))) ?></td>
                       <td class="col-dept">
@@ -398,7 +413,10 @@ render_layout_start("Ficha trabajador - Portal del trabajador", [
                       </td>
                       <td class="col-cat"><?= htmlspecialchars((string)($c["category"] ?? "")) ?></td>
                       <td class="col-status"><span class="status-badge <?= htmlspecialchars($statusClass) ?>"><?= htmlspecialchars($statusRaw) ?></span></td>
-                      <td class="col-file"><?= htmlspecialchars((string)($c["source_filename"] ?? "")) ?></td>
+                      <td class="col-file">
+                        <?= htmlspecialchars((string)($c["source_filename"] ?? "")) ?>
+                        <?php if (!empty($c["persona_sustituida"])): ?><div class="muted" style="font-size:11px;">Sustituye a <?= htmlspecialchars((string)$c["persona_sustituida"]) ?></div><?php endif; ?>
+                      </td>
                       <td class="col-pdf">
                         <?php if (!empty($c["source_base"]) && !empty($c["pdf_relpath"])): ?>
                           <a class="icon-link" href="view.php?base=<?= rawurlencode((string)$c["source_base"]) ?>&file=<?= rawurlencode((string)$c["pdf_relpath"]) ?>" target="_blank" rel="noopener" title="Abrir PDF" aria-label="Abrir PDF">

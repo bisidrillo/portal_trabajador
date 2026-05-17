@@ -9,6 +9,7 @@ if (empty($_SESSION["user"])) {
 
 require_once __DIR__ . "/includes/layout.php";
 require_once __DIR__ . "/includes/contract_utils.php";
+require_once __DIR__ . "/includes/contract_filename_parser.php";
 
 function table_exists(PDO $pdo, string $table): bool
 {
@@ -76,6 +77,13 @@ function guess_missing_department_reason(array $contract): string
     $filename = (string)($contract["source_filename"] ?? "");
     if ($filename === "") {
         return "Sin source_filename en base de datos.";
+    }
+    $parsed = parseContratoFilename($filename);
+    if ($parsed !== null) {
+        $department = trim((string)($parsed["department"] ?? ""));
+        return $department !== ""
+            ? "El parser central detecta departamento '{$department}', pero la base de datos lo tiene vacio."
+            : "El parser central no pudo deducir departamento.";
     }
 
     $base = preg_replace('/\.pdf$/i', '', $filename);
@@ -246,6 +254,11 @@ function looks_like_contract_unique_code(string $token): bool
 
 function extract_unique_code_from_filename(string $filename, string $contractType = ""): string
 {
+    $parsed = parseContratoFilename($filename);
+    if ($parsed !== null && trim((string)($parsed["unique_code"] ?? "")) !== "") {
+        return trim((string)$parsed["unique_code"]);
+    }
+
     $base = preg_replace('/\.pdf$/i', '', trim($filename));
     if (!is_string($base) || $base === "") {
         return "";
@@ -288,9 +301,14 @@ function build_contract_filename(array $contract, string $departmentLabel): stri
     $contractType = safe_path_segment((string)($contract["contract_type"] ?? ""));
     $department = safe_path_segment($departmentLabel);
     $category = safe_path_segment((string)($contract["category"] ?? ""));
+    $sourceParsed = parseContratoFilename((string)($contract["source_filename"] ?? ""));
     $filenameDates = extract_filename_date_tokens((string)($contract["source_filename"] ?? ""));
     $startDate = $filenameDates[0] ?? "";
     $endDate = $filenameDates[1] ?? "";
+    if ($sourceParsed !== null) {
+        $startDate = filename_date_token((string)($sourceParsed["start_date"] ?? "")) ?: $startDate;
+        $endDate = !empty($sourceParsed["end_date"]) ? filename_date_token((string)$sourceParsed["end_date"]) : "";
+    }
 
     if ($startDate === "") {
         $startDate = placeholder_date_token();
@@ -308,7 +326,13 @@ function build_contract_filename(array $contract, string $departmentLabel): stri
         $tokens[] = $category;
     }
     $tokens[] = $startDate;
-    if ($endDate !== "") {
+    $isSubstitution = !empty($contract["es_sustitucion"]) || ($sourceParsed !== null && !empty($sourceParsed["es_sustitucion"]));
+    if ($isSubstitution) {
+        $personaSustituida = trim((string)($contract["persona_sustituida"] ?? ($sourceParsed["persona_sustituida"] ?? "")));
+        if ($personaSustituida !== "") {
+            $tokens[] = safe_path_segment($personaSustituida);
+        }
+    } elseif ($endDate !== "") {
         $tokens[] = $endDate;
     }
 
