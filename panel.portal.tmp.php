@@ -19,6 +19,27 @@ function parse_date_str(string $value): ?DateTimeImmutable {
     return contract_parse_date($value);
 }
 
+function table_exists(PDO $pdo, string $table): bool {
+    $stmt = $pdo->prepare("SELECT 1 FROM information_schema.tables WHERE table_schema = DATABASE() AND table_name = ? LIMIT 1");
+    $stmt->execute([$table]);
+    return (bool)$stmt->fetchColumn();
+}
+
+function column_exists(PDO $pdo, string $table, string $column): bool {
+    $stmt = $pdo->prepare("SELECT 1 FROM information_schema.columns WHERE table_schema = DATABASE() AND table_name = ? AND column_name = ? LIMIT 1");
+    $stmt->execute([$table, $column]);
+    return (bool)$stmt->fetchColumn();
+}
+
+function format_date_es(?string $date): string {
+    $raw = trim((string)$date);
+    if ($raw === "" || $raw === "0000-00-00") {
+        return "-";
+    }
+    $ts = strtotime($raw);
+    return $ts === false ? $raw : date("d/m/Y", $ts);
+}
+
 function extract_dates_from_name(string $name): array {
     $dates = [];
     if (preg_match_all('/\b(\d{4}-\d{2}-\d{2})\b/', $name, $m)) {
@@ -331,6 +352,7 @@ $sustituto = trim($_GET["sustituto"] ?? "");
 $sustituido = trim($_GET["sustituido"] ?? "");
 $errors = [];
 $results = [];
+$substitutionResults = [];
 $people = [];
 $limit = 200;
 $isAdmin = !empty($_SESSION["is_admin"]);
@@ -344,12 +366,10 @@ foreach ($DOCUMENT_ROOTS as $label => $root) {
     }
 }
 
-if ($isAdmin) {
-    try {
-        $pdo = require __DIR__ . "/db.php";
-    } catch (Throwable $e) {
-        $pdo = null;
-    }
+try {
+    $pdo = require __DIR__ . "/db.php";
+} catch (Throwable $e) {
+    $pdo = null;
 }
 
 if ($q !== "" || $person !== "" || $has_filter) {
@@ -382,6 +402,38 @@ if ($q !== "" || $person !== "" || $has_filter) {
                 $limit
             );
         }
+    }
+}
+
+if ($sustituido !== "" && $pdo instanceof PDO) {
+    try {
+        if (
+            table_exists($pdo, "contracts")
+            && column_exists($pdo, "contracts", "es_sustitucion")
+            && column_exists($pdo, "contracts", "persona_sustituida")
+        ) {
+            $sql = "
+                SELECT id, worker_name, persona_sustituida, contract_type, start_date, end_date, source_base, pdf_relpath, source_filename
+                FROM contracts
+                WHERE es_sustitucion = 1
+                  AND persona_sustituida LIKE ?
+            ";
+            $params = ["%" . $sustituido . "%"];
+            if ($sustituto !== "") {
+                $sql .= " AND worker_name LIKE ?";
+                $params[] = "%" . $sustituto . "%";
+            }
+            if ($type !== "") {
+                $sql .= " AND contract_type = ?";
+                $params[] = $type;
+            }
+            $sql .= " ORDER BY start_date DESC, worker_name ASC LIMIT " . (int)$limit;
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute($params);
+            $substitutionResults = $stmt->fetchAll();
+        }
+    } catch (Throwable $e) {
+        $errors[] = "No se pudo consultar sustituciones en base de datos: " . $e->getMessage();
     }
 }
 
@@ -427,9 +479,12 @@ render_layout_start("Panel - Portal del trabajador", [
   .panel-hero{display:grid;gap:14px;}
   .panel-summary{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px;}
   .panel-badges{display:flex;gap:8px;flex-wrap:wrap;}
-  .panel-badge{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.82);border:1px solid rgba(148,163,184,.18);font-size:11px;font-weight:700;color:#314155;}
-  .panel-intro{max-width:66ch}
-  @media (min-width: 1024px){
+	  .panel-badge{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.82);border:1px solid rgba(148,163,184,.18);font-size:11px;font-weight:700;color:#314155;}
+	  .panel-intro{max-width:66ch}
+	  .substitution-table .col-date{white-space:nowrap;width:10%;}
+	  .substitution-table .col-type{white-space:nowrap;width:8%;text-align:center;}
+	  .substitution-table .col-pdf{white-space:nowrap;width:7%;text-align:center;}
+	  @media (min-width: 1024px){
     .panel-hero{grid-template-columns:2.2fr 1fr;}
   }
 </style>
@@ -478,9 +533,66 @@ render_layout_start("Panel - Portal del trabajador", [
       <?php endforeach; ?>
     </div>
   <?php endif; ?>
-</div>
+	</div>
 
-<?php if (($q !== "" || $person !== "" || $has_filter) && !$errors): ?>
+	<?php if ($sustituido !== "" && !$errors): ?>
+	  <div class="container wide">
+	    <div class="card">
+	      <div class="panel-summary">
+	        <div>
+	          <span class="section-kicker">Sustituciones registradas</span>
+	          <div class="panel-badges" style="margin-top:10px;">
+	            <span class="panel-badge">Persona sustituida: <?= htmlspecialchars($sustituido) ?></span>
+	            <span class="panel-badge"><?= count($substitutionResults) ?> resultado<?= count($substitutionResults) === 1 ? "" : "s" ?></span>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="table-wrap">
+	        <table class="substitution-table">
+	          <thead>
+	            <tr>
+	              <th>Sustituto</th>
+	              <th>Persona sustituida</th>
+	              <th class="col-type">Tipo</th>
+	              <th class="col-date">Inicio</th>
+	              <th>Archivo</th>
+	              <th class="col-pdf">PDF</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	            <?php if (!$substitutionResults): ?>
+	              <tr><td colspan="6">Sin sustituciones registradas para esa búsqueda</td></tr>
+	            <?php else: ?>
+	              <?php foreach ($substitutionResults as $row): ?>
+	                <tr>
+	                  <td><?= htmlspecialchars((string)($row["worker_name"] ?? "")) ?></td>
+	                  <td><?= htmlspecialchars((string)($row["persona_sustituida"] ?? "")) ?></td>
+	                  <td class="col-type"><?= htmlspecialchars((string)($row["contract_type"] ?? "")) ?></td>
+	                  <td class="col-date"><?= htmlspecialchars(format_date_es((string)($row["start_date"] ?? ""))) ?></td>
+	                  <td><?= htmlspecialchars((string)($row["source_filename"] ?? "")) ?></td>
+	                  <td class="col-pdf">
+	                    <?php if (!empty($row["source_base"]) && !empty($row["pdf_relpath"])): ?>
+	                      <a class="icon-link" href="view.php?base=<?= rawurlencode((string)$row["source_base"]) ?>&file=<?= rawurlencode((string)$row["pdf_relpath"]) ?>" target="_blank" rel="noopener" title="Abrir PDF" aria-label="Abrir PDF">
+	                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+	                          <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"></path>
+	                          <circle cx="12" cy="12" r="3"></circle>
+	                        </svg>
+	                      </a>
+	                    <?php else: ?>
+	                      -
+	                    <?php endif; ?>
+	                  </td>
+	                </tr>
+	              <?php endforeach; ?>
+	            <?php endif; ?>
+	          </tbody>
+	        </table>
+	      </div>
+	    </div>
+	  </div>
+	<?php endif; ?>
+
+	<?php if (($q !== "" || $person !== "" || $has_filter) && !$errors): ?>
   <div class="container wide">
     <div class="card">
       <div class="panel-summary">
