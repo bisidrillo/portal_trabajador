@@ -353,11 +353,15 @@ $sustituido = trim($_GET["sustituido"] ?? "");
 $errors = [];
 $results = [];
 $substitutionResults = [];
+$extensionResults = [];
+$conversionResults = [];
 $people = [];
 $limit = 200;
 $isAdmin = !empty($_SESSION["is_admin"]);
 $pdo = null;
-$has_filter = $type !== "" || $section !== "" || $date_from !== "" || $date_to !== "" || $sustituto !== "" || $sustituido !== "";
+$showProrrogas = ($_GET["prorrogas"] ?? "0") === "1";
+$showConversiones = ($_GET["conversiones"] ?? "0") === "1";
+$has_filter = $type !== "" || $section !== "" || $date_from !== "" || $date_to !== "" || $sustituto !== "" || $sustituido !== "" || $showProrrogas || $showConversiones;
 $available_roots = [];
 
 foreach ($DOCUMENT_ROOTS as $label => $root) {
@@ -437,6 +441,35 @@ if ($sustituido !== "" && $pdo instanceof PDO) {
     }
 }
 
+if (($showProrrogas || $showConversiones) && $pdo instanceof PDO) {
+    try {
+        if (table_exists($pdo, "contracts")) {
+            if ($showProrrogas && column_exists($pdo, "contracts", "es_prorroga")) {
+                $stmt = $pdo->query(
+                    "SELECT id, worker_name, contract_type, start_date, end_date, inss_code, codigo_inss_base, numero_prorroga, source_base, pdf_relpath, source_filename
+                     FROM contracts
+                     WHERE es_prorroga = 1
+                     ORDER BY start_date DESC, worker_name ASC
+                     LIMIT " . (int)$limit
+                );
+                $extensionResults = $stmt->fetchAll();
+            }
+            if ($showConversiones && column_exists($pdo, "contracts", "es_conversion")) {
+                $stmt = $pdo->query(
+                    "SELECT id, worker_name, contract_type, start_date, end_date, modalidad, source_base, pdf_relpath, source_filename
+                     FROM contracts
+                     WHERE es_conversion = 1
+                     ORDER BY start_date DESC, worker_name ASC
+                     LIMIT " . (int)$limit
+                );
+                $conversionResults = $stmt->fetchAll();
+            }
+        }
+    } catch (Throwable $e) {
+        $errors[] = "No se pudo consultar reglas laborales en base de datos: " . $e->getMessage();
+    }
+}
+
 if ($results && $pdo instanceof PDO) {
     $stmt = $pdo->prepare("SELECT id, source_base, pdf_relpath, worker_name FROM contracts WHERE source_base = ? AND pdf_relpath = ? LIMIT 1");
     foreach ($results as &$r) {
@@ -481,9 +514,9 @@ render_layout_start("Panel - Portal del trabajador", [
   .panel-badges{display:flex;gap:8px;flex-wrap:wrap;}
 	  .panel-badge{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.82);border:1px solid rgba(148,163,184,.18);font-size:11px;font-weight:700;color:#314155;}
 	  .panel-intro{max-width:66ch}
-	  .substitution-table .col-date{white-space:nowrap;width:10%;}
-	  .substitution-table .col-type{white-space:nowrap;width:8%;text-align:center;}
-	  .substitution-table .col-pdf{white-space:nowrap;width:7%;text-align:center;}
+		  .rules-table .col-date{white-space:nowrap;width:10%;}
+		  .rules-table .col-type{white-space:nowrap;width:8%;text-align:center;}
+		  .rules-table .col-pdf{white-space:nowrap;width:7%;text-align:center;}
 	  @media (min-width: 1024px){
     .panel-hero{grid-template-columns:2.2fr 1fr;}
   }
@@ -506,9 +539,11 @@ render_layout_start("Panel - Portal del trabajador", [
           <option value="change" <?= $section === "change" ? "selected" : "" ?>>Cambio de contrato</option>
           <option value="calls" <?= $section === "calls" ? "selected" : "" ?>>Suspensiones y llamamientos</option>
         </select>
-        <input name="sustituto" value="<?= htmlspecialchars($sustituto) ?>" placeholder="Nombre sustituto">
-        <input name="sustituido" value="<?= htmlspecialchars($sustituido) ?>" placeholder="Nombre sustituido">
-        <button class="btn" type="submit">Buscar</button>
+	        <input name="sustituto" value="<?= htmlspecialchars($sustituto) ?>" placeholder="Nombre sustituto">
+	        <input name="sustituido" value="<?= htmlspecialchars($sustituido) ?>" placeholder="Nombre sustituido">
+	        <label class="panel-badge"><input type="checkbox" name="prorrogas" value="1" <?= $showProrrogas ? "checked" : "" ?>> Prorrogas</label>
+	        <label class="panel-badge"><input type="checkbox" name="conversiones" value="1" <?= $showConversiones ? "checked" : "" ?>> Conversiones</label>
+	        <button class="btn" type="submit">Buscar</button>
       </form>
     </div>
 
@@ -548,7 +583,7 @@ render_layout_start("Panel - Portal del trabajador", [
 	        </div>
 	      </div>
 	      <div class="table-wrap">
-	        <table class="substitution-table">
+		        <table class="rules-table">
 	          <thead>
 	            <tr>
 	              <th>Sustituto</th>
@@ -581,6 +616,116 @@ render_layout_start("Panel - Portal del trabajador", [
 	                    <?php else: ?>
 	                      -
 	                    <?php endif; ?>
+	                  </td>
+	                </tr>
+	              <?php endforeach; ?>
+	            <?php endif; ?>
+	          </tbody>
+	        </table>
+	      </div>
+	    </div>
+	  </div>
+	<?php endif; ?>
+
+	<?php if ($showProrrogas && !$errors): ?>
+	  <div class="container wide">
+	    <div class="card">
+	      <div class="panel-summary">
+	        <div>
+	          <span class="section-kicker">Prorrogas registradas</span>
+	          <div class="panel-badges" style="margin-top:10px;">
+	            <span class="panel-badge"><?= count($extensionResults) ?> resultado<?= count($extensionResults) === 1 ? "" : "s" ?></span>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="table-wrap">
+	        <table class="rules-table">
+	          <thead>
+	            <tr>
+	              <th>Trabajador</th>
+	              <th class="col-type">Tipo</th>
+	              <th class="col-date">Inicio</th>
+	              <th>Codigo INSS</th>
+	              <th>Codigo base</th>
+	              <th>Archivo</th>
+	              <th class="col-pdf">PDF</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	            <?php if (!$extensionResults): ?>
+	              <tr><td colspan="7">Sin prorrogas registradas</td></tr>
+	            <?php else: ?>
+	              <?php foreach ($extensionResults as $row): ?>
+	                <tr>
+	                  <td><?= htmlspecialchars((string)($row["worker_name"] ?? "")) ?></td>
+	                  <td class="col-type"><?= htmlspecialchars((string)($row["contract_type"] ?? "")) ?></td>
+	                  <td class="col-date"><?= htmlspecialchars(format_date_es((string)($row["start_date"] ?? ""))) ?></td>
+	                  <td><?= htmlspecialchars((string)($row["inss_code"] ?? "")) ?></td>
+	                  <td><?= htmlspecialchars((string)($row["codigo_inss_base"] ?? "")) ?></td>
+	                  <td><?= htmlspecialchars((string)($row["source_filename"] ?? "")) ?></td>
+	                  <td class="col-pdf">
+	                    <?php if (!empty($row["source_base"]) && !empty($row["pdf_relpath"])): ?>
+	                      <a class="icon-link" href="view.php?base=<?= rawurlencode((string)$row["source_base"]) ?>&file=<?= rawurlencode((string)$row["pdf_relpath"]) ?>" target="_blank" rel="noopener" title="Abrir PDF" aria-label="Abrir PDF">
+	                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+	                          <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"></path>
+	                          <circle cx="12" cy="12" r="3"></circle>
+	                        </svg>
+	                      </a>
+	                    <?php else: ?>-<?php endif; ?>
+	                  </td>
+	                </tr>
+	              <?php endforeach; ?>
+	            <?php endif; ?>
+	          </tbody>
+	        </table>
+	      </div>
+	    </div>
+	  </div>
+	<?php endif; ?>
+
+	<?php if ($showConversiones && !$errors): ?>
+	  <div class="container wide">
+	    <div class="card">
+	      <div class="panel-summary">
+	        <div>
+	          <span class="section-kicker">Conversiones a indefinido</span>
+	          <div class="panel-badges" style="margin-top:10px;">
+	            <span class="panel-badge"><?= count($conversionResults) ?> resultado<?= count($conversionResults) === 1 ? "" : "s" ?></span>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="table-wrap">
+	        <table class="rules-table">
+	          <thead>
+	            <tr>
+	              <th>Trabajador</th>
+	              <th class="col-type">Tipo</th>
+	              <th class="col-date">Inicio</th>
+	              <th>Modalidad</th>
+	              <th>Archivo</th>
+	              <th class="col-pdf">PDF</th>
+	            </tr>
+	          </thead>
+	          <tbody>
+	            <?php if (!$conversionResults): ?>
+	              <tr><td colspan="6">Sin conversiones registradas</td></tr>
+	            <?php else: ?>
+	              <?php foreach ($conversionResults as $row): ?>
+	                <tr>
+	                  <td><?= htmlspecialchars((string)($row["worker_name"] ?? "")) ?></td>
+	                  <td class="col-type"><?= htmlspecialchars((string)($row["contract_type"] ?? "")) ?></td>
+	                  <td class="col-date"><?= htmlspecialchars(format_date_es((string)($row["start_date"] ?? ""))) ?></td>
+	                  <td><?= htmlspecialchars((string)($row["modalidad"] ?? "")) ?></td>
+	                  <td><?= htmlspecialchars((string)($row["source_filename"] ?? "")) ?></td>
+	                  <td class="col-pdf">
+	                    <?php if (!empty($row["source_base"]) && !empty($row["pdf_relpath"])): ?>
+	                      <a class="icon-link" href="view.php?base=<?= rawurlencode((string)$row["source_base"]) ?>&file=<?= rawurlencode((string)$row["pdf_relpath"]) ?>" target="_blank" rel="noopener" title="Abrir PDF" aria-label="Abrir PDF">
+	                        <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+	                          <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"></path>
+	                          <circle cx="12" cy="12" r="3"></circle>
+	                        </svg>
+	                      </a>
+	                    <?php else: ?>-<?php endif; ?>
 	                  </td>
 	                </tr>
 	              <?php endforeach; ?>
