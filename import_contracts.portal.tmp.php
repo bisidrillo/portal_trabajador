@@ -423,7 +423,8 @@ function file_is_unchanged(array $row, array $stateMap): bool
     }
 
     return (int)$stateMap[$key]["file_size"] === (int)$row["size"]
-        && (int)$stateMap[$key]["file_mtime"] === (int)$row["mtime"];
+        && (int)$stateMap[$key]["file_mtime"] === (int)$row["mtime"]
+        && (string)$stateMap[$key]["last_result"] === "parsed";
 }
 
 function upsert_import_state(PDO $pdo, array $row, string $result, ?string $error = null): void
@@ -515,6 +516,12 @@ function upsert_contract(PDO $pdo, int $workerId, string $sourceBase, string $re
         $existingId = $stmt->fetchColumn();
     }
 
+    if (!$existingId && $contractCode !== "") {
+        $stmt = $pdo->prepare("SELECT id FROM contracts WHERE contract_code = ? LIMIT 1");
+        $stmt->execute([$contractCode]);
+        $existingId = $stmt->fetchColumn();
+    }
+
     if ($existingId) {
         $extraSet = "";
         $extraParams = [];
@@ -525,7 +532,7 @@ function upsert_contract(PDO $pdo, int $workerId, string $sourceBase, string $re
         $stmt = $pdo->prepare(
             "UPDATE contracts
              SET worker_id = ?, contract_code = ?, worker_name = ?, contract_type = ?, start_date = ?, end_date = ?,
-                 department = ?, category = ?, inss_code = ?, status = ?, pdf_relpath = ?, source_filename = ?{$extraSet}, updated_at = CURRENT_TIMESTAMP
+                 department = ?, category = ?, inss_code = ?, status = ?, source_base = ?, pdf_relpath = ?, source_filename = ?{$extraSet}, updated_at = CURRENT_TIMESTAMP
              WHERE id = ?"
         );
         $params = [
@@ -539,6 +546,7 @@ function upsert_contract(PDO $pdo, int $workerId, string $sourceBase, string $re
             $m["category"],
             $m["inss_code"],
             $m["status"],
+            $sourceBase,
             $rel,
             $filename,
         ];
