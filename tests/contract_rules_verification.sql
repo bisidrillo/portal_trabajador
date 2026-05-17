@@ -85,3 +85,61 @@ SELECT
   SUM(es_conversion = 1) AS conversiones,
   SUM(es_indefinido = 1) AS indefinidos_por_conversion
 FROM contracts;
+
+-- 7) Conversiones a indefinido por periodo reciente.
+SELECT
+  'ultimos_3_meses' AS periodo,
+  COUNT(*) AS conversiones
+FROM contracts
+WHERE es_conversion = 1
+  AND start_date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH)
+UNION ALL
+SELECT
+  'ultimos_6_meses' AS periodo,
+  COUNT(*) AS conversiones
+FROM contracts
+WHERE es_conversion = 1
+  AND start_date >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH)
+UNION ALL
+SELECT
+  'ultimos_9_meses' AS periodo,
+  COUNT(*) AS conversiones
+FROM contracts
+WHERE es_conversion = 1
+  AND start_date >= DATE_SUB(CURDATE(), INTERVAL 9 MONTH)
+UNION ALL
+SELECT
+  'ultimos_12_meses' AS periodo,
+  COUNT(*) AS conversiones
+FROM contracts
+WHERE es_conversion = 1
+  AND start_date >= DATE_SUB(CURDATE(), INTERVAL 12 MONTH);
+
+-- 8) Prorrogas por periodo reciente.
+SELECT
+  'ultimos_3_meses' AS periodo,
+  COUNT(*) AS prorrogas
+FROM contracts
+WHERE es_prorroga = 1
+  AND start_date >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH)
+UNION ALL
+SELECT
+  'ultimos_6_meses' AS periodo,
+  COUNT(*) AS prorrogas
+FROM contracts
+WHERE es_prorroga = 1
+  AND start_date >= DATE_SUB(CURDATE(), INTERVAL 6 MONTH)
+UNION ALL
+SELECT
+  'ultimos_9_meses' AS periodo,
+  COUNT(*) AS prorrogas
+FROM contracts
+WHERE es_prorroga = 1
+  AND start_date >= DATE_SUB(CURDATE(), INTERVAL 9 MONTH)
+UNION ALL
+SELECT
+  'ultimos_12_meses' AS periodo,
+  COUNT(*) AS prorrogas
+FROM contracts
+WHERE es_prorroga = 1
+  AND start_date >= DATE_SUB(CURDATE(), INTERVAL 12 MONTH);
